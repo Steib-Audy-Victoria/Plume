@@ -55,6 +55,9 @@ module.exports = {
         "6xl": "2.5rem",
         "7xl": "3.125rem",
         "full": "9999px"
+      },
+      "width": {
+        "300": "18.75rem, 300px"
       }
     },
   },
