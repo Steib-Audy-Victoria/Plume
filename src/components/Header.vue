@@ -1,6 +1,8 @@
 <template>
-  <User></User>
-  <Plume></Plume>
+  <div class="flex justify-between p-4">
+    <User></User>
+    <Plume></Plume>
+  </div>
 </template>
 <script >
 import Plume from "./icons/Plume.vue";

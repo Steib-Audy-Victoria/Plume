@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-black">
+  <div class="bg-black p-2">
     <div class="grid">
       <h2 class="col-span-2 text-Orange font-baloo text-4xl">Explorer</h2>
       <div class="col-start-2">
