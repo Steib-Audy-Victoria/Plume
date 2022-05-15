@@ -15,7 +15,7 @@
     <div>
       <img
         src="public/img/dessin_enfant.jpg"
-        class="rounded-r-lg object-cover"
+        class="rounded-r-lg object-cover pl-2"
       />
     </div>
   </div>

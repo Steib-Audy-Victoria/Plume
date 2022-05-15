@@ -1,5 +1,5 @@
 <template>
-  <div class="border-2 border-red-600 rounded-xl w-max">
+  <div class="border-2 border-Rouge rounded-xl w-max">
     <div class="flex justify-start items-center bg-white">
       <img src="public/img/img_profil.jpg" class="object-none" />
       <p
