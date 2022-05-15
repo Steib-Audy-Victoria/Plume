@@ -1,5 +1,5 @@
 <template>
-  <div class="border-2 border-red rounded-3xl w-300">
+  <div class="border-2 rounded-3xl w-max">
     <div class="flex justify-start items-center bg-white">
       <img
         src="public/img/img_profil.jpg"
@@ -28,6 +28,6 @@
         50 €
       </p>
     </div>
-    <img src="public/img/monster.jpg" class="object-cover" />
+    <img src="public/img/monster.jpg" class="object-cover w-300" />
   </div>
 </template>
