@@ -1,33 +1,14 @@
 <template>
-  <div class="border-2 rounded-3xl w-max">
+  <div class="border-2 border-red-600 rounded-xl w-max">
     <div class="flex justify-start items-center bg-white">
-      <img
-        src="public/img/img_profil.jpg"
-        class="flex-grow-0 flex-shrink-0 object-none"
-      />
+      <img src="public/img/img_profil.jpg" class="object-none" />
       <p
-        class="
-          flex-grow
-          w-20
-          text-xl
-          font-baloo font-semibold
-          text-left text-black
-        "
+        class="flex-grow text-xl font-baloo font-semibold text-left text-black"
       >
         Alice P.
       </p>
-      <p
-        class="
-          flex-grow-0 flex-shrink-0
-          text-xl
-          font-semibold
-          text-left text-black
-          font-baloo
-        "
-      >
-        50 €
-      </p>
+      <p class="text-xl font-semibold text-left text-black font-baloo">50 €</p>
     </div>
-    <img src="public/img/monster.jpg" class="object-cover w-300" />
+    <img src="public/img/monster.jpg" class="object-cover rounded-b-xl" />
   </div>
 </template>
