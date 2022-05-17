@@ -1,26 +1,19 @@
 <template>
   <header>
     <div class="flex justify-between p-4">
-      <User></User>
-      <Plume></Plume>
+      <RouterLink to="/Profil"><User></User></RouterLink>
+      <RouterLink to="/"><Plume></Plume></RouterLink>
     </div>
   </header>
 
   <RouterView />
 
   <main>
-    <div>
+    <div class="hidden">
       <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/apropos">A propos</RouterLink>
         <RouterLink to="/Guide">Guide</RouterLink>
-        <RouterLink to="/Messages">Messages</RouterLink>
         <RouterLink to="/Parametres">Parametres</RouterLink>
-        <RouterLink to="/Feed">Feed</RouterLink>
-        <RouterLink to="/NousSoutenir">Nous Soutenir</RouterLink>
-        <RouterLink to="/MentionsLegales">Mentions Légales</RouterLink>
         <RouterLink to="/NouvelleCommande">Nouvelle Commande</RouterLink>
-        <RouterLink to="/Profil">Profil</RouterLink>
         <RouterLink to="/RechercheArtiste">Recherche Artiste</RouterLink>
         <RouterLink to="/ProfilPaiement">Profil Paiement</RouterLink>
         <RouterLink to="/ProfilEdit">Profil Edit</RouterLink>
@@ -29,9 +22,9 @@
       </nav>
     </div>
     <div class="bg-black flex justify-between p-3 fixed bottom-0 w-full">
-      <users></users>
-      <home></home>
-      <message></message>
+      <RouterLink to="/Feed"><users></users></RouterLink>
+      <RouterLink to="/"><home></home></RouterLink>
+      <RouterLink to="/Messages"><message></message></RouterLink>
     </div>
   </main>
 
@@ -40,9 +33,19 @@
       <div class="grid">
         <h2 class="col-span-2 text-Orange font-baloo text-4xl">Explorer</h2>
         <div class="col-start-2">
-          <p class="text-white font-baloo text-4xl">A propos</p>
-          <p class="text-white font-baloo text-4xl">Nous soutenir</p>
-          <p class="text-white font-baloo text-4xl">Mentions légales</p>
+          <RouterLink to="/apropos"
+            ><p class="text-white font-baloo text-4xl">A propos</p></RouterLink
+          >
+          <RouterLink to="/NousSoutenir"
+            ><p class="text-white font-baloo text-4xl">
+              Nous soutenir
+            </p></RouterLink
+          >
+          <RouterLink to="/MentionsLegales"
+            ><p class="text-white font-baloo text-4xl">
+              Mentions légales
+            </p></RouterLink
+          >
         </div>
       </div>
       <div class="grid">
@@ -74,7 +77,7 @@
       </div>
       <div>
         <div class="flex justify-center items-center text-8xl">
-          <PlumeW></PlumeW>
+          <RouterLink to="/"><PlumeW></PlumeW></RouterLink>
           <h2 class="text-white font-praise">Plume</h2>
         </div>
         <div class="flex justify-evenly">
