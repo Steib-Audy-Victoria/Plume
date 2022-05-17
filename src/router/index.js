@@ -6,6 +6,14 @@ import MessagesView from '../views/MessagesView.vue'
 import ParametresView from '../views/ParametresView.vue'
 import FeedView from '../views/FeedView.vue'
 import NousSoutenirView from '../views/NousSoutenirView.vue'
+import MentionsLegalesView from '../views/MentionsLegalesView.vue'
+import NouvelleCommandeView from '../views/NouvelleCommandeView.vue'
+import ProfilView from '../views/ProfilView.vue'
+import RechercheArtisteView from '../views/RechercheArtisteView.vue'
+import ProfilPaiementView from '../views/ProfilPaiementView.vue'
+import ProfilEditView from '../views/ProfilEditView.vue'
+import ConnexionView from '../views/ConnexionView.vue'
+import InscriptionView from '../views/InscriptionView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -39,6 +47,46 @@ const router = createRouter({
       path: '/noussoutenir',
       name: 'noussoutenir',
       component: NousSoutenirView
+    },
+    {
+      path: '/mentionslegales',
+      name: 'mentionslegales',
+      component: MentionsLegalesView
+    },
+    {
+      path: '/nouvellecommande',
+      name: 'nouvellecommande',
+      component: NouvelleCommandeView
+    },
+    {
+      path: '/profil',
+      name: 'profil',
+      component: ProfilView
+    },
+    {
+      path: '/rechercheartiste',
+      name: 'rechercheartiste',
+      component: RechercheArtisteView
+    },
+    {
+      path: '/profilpaiement',
+      name: 'profilpaiement',
+      component: ProfilPaiementView
+    },
+    {
+      path: '/profiledit',
+      name: 'profiledit',
+      component: ProfilEditView
+    },
+    {
+      path: '/connexion',
+      name: 'connexion',
+      component: ConnexionView
+    },
+    {
+      path: '/inscription',
+      name: 'inscription',
+      component: InscriptionView
     },
     { path: '/Guide', name: 'GuideView', component: GuideView }
   ]
