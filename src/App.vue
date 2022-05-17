@@ -8,8 +8,12 @@
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/apropos">A propos</RouterLink>
         <RouterLink to="/Guide">Guide</RouterLink>
+        <RouterLink to="/Messages">Messages</RouterLink>
+        <RouterLink to="/Parametres">Parametres</RouterLink>
+        <RouterLink to="/Feed">Feed</RouterLink>
+        <RouterLink to="/NousSoutenir">Nous Soutenir</RouterLink>
       </nav>
     </div>
   </header>
