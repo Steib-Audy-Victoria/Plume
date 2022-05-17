@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-between p-4 w-4">
+  <div class="flex justify-between p-4">
     <User></User>
     <Plume></Plume>
   </div>
