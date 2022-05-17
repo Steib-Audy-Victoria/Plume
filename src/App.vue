@@ -1,11 +1,15 @@
 <template>
   <header>
-    <div>
-      <div class="flex justify-between p-4">
-        <User></User>
-        <Plume></Plume>
-      </div>
+    <div class="flex justify-between p-4">
+      <User></User>
+      <Plume></Plume>
+    </div>
+  </header>
 
+  <RouterView />
+
+  <main>
+    <div>
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/apropos">A propos</RouterLink>
@@ -24,9 +28,12 @@
         <RouterLink to="/Connexion">Connexion</RouterLink>
       </nav>
     </div>
-  </header>
-
-  <RouterView />
+    <div class="bg-black flex justify-between p-3 fixed bottom-0 w-full">
+      <users></users>
+      <home></home>
+      <message></message>
+    </div>
+  </main>
 
   <footer>
     <div class="bg-black p-2">
@@ -90,9 +97,22 @@ import PlumeW from "./components/icons/PlumeW.vue";
 import instagram from "./components/icons/instagram.vue";
 import facebook from "./components/icons/facebook.vue";
 import twitter from "./components/icons/twitter.vue";
+import users from "./components/icons/users.vue";
+import home from "./components/icons/home.vue";
+import message from "./components/icons/message.vue";
 
 export default {
   name: "App",
-  components: { Plume, User, PlumeW, instagram, facebook, twitter },
+  components: {
+    Plume,
+    User,
+    PlumeW,
+    instagram,
+    facebook,
+    twitter,
+    users,
+    home,
+    message,
+  },
 };
 </script>
