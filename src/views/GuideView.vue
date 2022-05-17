@@ -1,5 +1,4 @@
 <template>
-  <Header></Header>
   <Footer></Footer>
   <Menu></Menu>
   <CardArtisteRecherche></CardArtisteRecherche>
