@@ -1,6 +1,6 @@
 <template>
-  <div class="parametre">
-    <h1>Ceci est la page paramètre</h1>
+  <div class="mentionslegales">
+    <h1>Ceci est la page mentions légales</h1>
   </div>
 </template>
 

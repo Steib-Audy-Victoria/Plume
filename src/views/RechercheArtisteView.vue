@@ -1,6 +1,6 @@
 <template>
-  <div class="parametre">
-    <h1>Ceci est la page paramètre</h1>
+  <div class="rechercheartiste">
+    <h1>Ceci est la page recherche artiste</h1>
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
-  <div class="parametre">
-    <h1>Ceci est la page paramètre</h1>
+  <div class="nouvellecommande">
+    <h1>Ceci est la page nouvelle commande</h1>
   </div>
 </template>
 

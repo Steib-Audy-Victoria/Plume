@@ -14,6 +14,14 @@
         <RouterLink to="/Parametres">Parametres</RouterLink>
         <RouterLink to="/Feed">Feed</RouterLink>
         <RouterLink to="/NousSoutenir">Nous Soutenir</RouterLink>
+        <RouterLink to="/MentionsLegales">Mentions Légales</RouterLink>
+        <RouterLink to="/NouvelleCommande">Nouvelle Commande</RouterLink>
+        <RouterLink to="/Profil">Profil</RouterLink>
+        <RouterLink to="/RechercheArtiste">Recherche Artiste</RouterLink>
+        <RouterLink to="/ProfilPaiement">Profil Paiement</RouterLink>
+        <RouterLink to="/ProfilEdit">Profil Edit</RouterLink>
+        <RouterLink to="/Inscription">Inscription</RouterLink>
+        <RouterLink to="/Connexion">Connexion</RouterLink>
       </nav>
     </div>
   </header>
