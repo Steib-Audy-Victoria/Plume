@@ -14,8 +14,6 @@ import CardCommande from "../components/CardCommande.vue";
 export default {
   name: "App",
   components: {
-    Header,
-    Footer,
     Menu,
     CardArtisteRecherche,
     PostFeed,
