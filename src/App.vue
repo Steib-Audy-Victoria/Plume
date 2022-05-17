@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header class="fixed w-full">
     <div class="flex justify-between p-4">
       <RouterLink to="/Profil"><User></User></RouterLink>
       <RouterLink to="/"><Plume></Plume></RouterLink>
