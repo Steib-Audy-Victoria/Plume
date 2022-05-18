@@ -28,28 +28,28 @@
     </div>
   </main>
 
-  <footer>
+  <footer class="pb-14">
     <div class="bg-black p-2">
       <div class="grid">
-        <h2 class="col-span-2 text-Orange font-baloo text-4xl">Explorer</h2>
+        <h2 class="col-span-2 text-Orange font-baloo text-3xl">Explorer</h2>
         <div class="col-start-2">
           <RouterLink to="/apropos"
-            ><p class="text-white font-baloo text-4xl">A propos</p></RouterLink
+            ><p class="text-white font-baloo text-3xl">A propos</p></RouterLink
           >
           <RouterLink to="/NousSoutenir"
-            ><p class="text-white font-baloo text-4xl">
+            ><p class="text-white font-baloo text-3xl">
               Nous soutenir
             </p></RouterLink
           >
           <RouterLink to="/MentionsLegales"
-            ><p class="text-white font-baloo text-4xl">
+            ><p class="text-white font-baloo text-3xl">
               Mentions légales
             </p></RouterLink
           >
         </div>
       </div>
       <div class="grid">
-        <h2 class="col-span-2 text-Orange font-baloo text-4xl">
+        <h2 class="col-span-2 text-Orange font-baloo text-3xl">
           Nous contacter
         </h2>
         <div class="col-start-2">
@@ -86,7 +86,7 @@
           <twitter></twitter>
         </div>
         <div class="flex justify-center">
-          <p class="font-baloo text-Gris text-4xl">© 2022 Plume</p>
+          <p class="font-baloo text-Gris text-1xl">© 2022 Plume</p>
         </div>
       </div>
     </div>
