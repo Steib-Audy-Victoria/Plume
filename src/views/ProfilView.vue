@@ -5,7 +5,7 @@
     <div class="flex">
       <settings></settings>
       <p>
-        Laura_mg0
+        Laura_mg0t
       </p>
       <edit></edit>
     </div>  
