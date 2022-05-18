@@ -1,5 +1,5 @@
 <template>
-    <div class="w-75px h-24 rounded-15  ">
+    <div class="w-max p-1 h-24px rounded-xl border-2 border-red-600 font-baloo">
         <p>
             Manga
         </p>

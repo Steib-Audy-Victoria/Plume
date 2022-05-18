@@ -22,7 +22,7 @@ module.exports = {
       },
       "fontFamily": {
         "praise": "Praise, cursive",
-        "baloo": "Baloo 2, cursive",
+        "baloo": "Baloo 2, cursive ",
 
       },
       "boxShadow": {
