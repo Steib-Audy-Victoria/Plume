@@ -1,5 +1,7 @@
 <template>
-  <div class="w-max flex justify-evenly border-2 border-Rouge rounded-lg p-1">
+  <div
+    class="w-max flex justify-evenly border-2 border-Rouge rounded-lg p-1 m-5"
+  >
     <div class="grid content-around">
       <div>
         <p class="text-xl font-bold text-left text-black">Dessin</p>
