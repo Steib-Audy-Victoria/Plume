@@ -1,6 +1,6 @@
 <template>
-  <div class="border-2 border-Rouge rounded-xl w-max">
-    <div class="flex justify-start items-center bg-white">
+  <div class="border-2 border-Rouge rounded-xl w-max m-5">
+    <div class="flex justify-start items-center">
       <img src="public/img/img_profil.jpg" class="object-none" />
       <p
         class="flex-grow text-xl font-baloo font-semibold text-left text-black"

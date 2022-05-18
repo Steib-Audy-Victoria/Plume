@@ -1,15 +1,27 @@
 <template>
-  <div class="rechercheartiste">
-    <h1>Ceci est la page recherche artiste</h1>
+  <div class="pt-16"></div>
+  <div
+    class="
+      flex flex-col
+      md:grid md:grid-cols-2
+      xl:grid-cols-3
+      place-items-center
+    "
+  >
+    <CardArtisteRecherche></CardArtisteRecherche>
+    <CardArtisteRecherche></CardArtisteRecherche>
+    <CardArtisteRecherche></CardArtisteRecherche>
+    <CardArtisteRecherche></CardArtisteRecherche>
   </div>
 </template>
 
-<style>
-@media (min-width: 1024px) {
-  .apropos {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
-</style>
+<script>
+import CardArtisteRecherche from "../components/CardArtisteRecherche.vue";
+
+export default {
+  name: "App",
+  components: {
+    CardArtisteRecherche,
+  },
+};
+</script>
