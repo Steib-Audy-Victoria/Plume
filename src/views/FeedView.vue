@@ -1,15 +1,27 @@
 <template>
-  <div class="feed">
-    <h1>Ceci est la page feed</h1>
+  <div class="pt-16"></div>
+  <div
+    class="
+      flex flex-col
+      md:grid md:grid-cols-2
+      xl:grid-cols-3
+      place-items-center
+    "
+  >
+    <PostFeed></PostFeed>
+    <PostFeed></PostFeed>
+    <PostFeed></PostFeed>
+    <PostFeed></PostFeed>
   </div>
 </template>
 
-<style>
-@media (min-width: 1024px) {
-  .apropos {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
-</style>
+<script>
+import PostFeed from "../components/PostFeed.vue";
+
+export default {
+  name: "App",
+  components: {
+    PostFeed,
+  },
+};
+</script>
