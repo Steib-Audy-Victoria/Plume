@@ -9,12 +9,30 @@
   <div>
     <p class="font-baloo text-4xl w-1/5">COMMANDE EN COURS</p>
     <hr class="my-2 border-1 border-Rouge w-1/3" />
-    <CardCommande></CardCommande>
+    <div
+      class="
+        flex flex-col
+        md:grid md:grid-cols-2
+        xl:grid-cols-3
+        place-items-center
+      "
+    >
+      <CardCommande></CardCommande>
+    </div>
   </div>
   <div>
     <p class="font-baloo text-4xl w-1/5">COMMANDES PASSÉES</p>
     <hr class="my-2 border-1 border-Rouge w-1/3" />
-    <CardCommande2></CardCommande2>
+    <div
+      class="
+        flex flex-col
+        md:grid md:grid-cols-2
+        xl:grid-cols-3
+        place-items-center
+      "
+    >
+      <CardCommande2></CardCommande2>
+    </div>
   </div>
 </template>
 

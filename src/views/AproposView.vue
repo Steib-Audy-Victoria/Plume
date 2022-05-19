@@ -15,13 +15,26 @@
   <div>
     <h3 class="font-baloo font-bold text-xl pl-6 my-8">Qui sommes nous ?</h3>
   </div>
+  <div
+    class="
+      flex flex-col
+      md:grid md:grid-cols-2
+      xl:grid-cols-3
+      place-items-center
+    "
+  >
+    <CardAPropos></CardAPropos>
+    <CardAPropos></CardAPropos>
+    <CardAPropos></CardAPropos>
+  </div>
 </template>
 
 <script>
 import PlumeB from "../components/icons/PlumeB.vue";
+import CardAPropos from "../components/CardAPropos.vue";
 
 export default {
   name: "App",
-  components: { PlumeB },
+  components: { PlumeB, CardAPropos },
 };
 </script>
