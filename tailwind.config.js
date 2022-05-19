@@ -14,7 +14,7 @@ module.exports = {
         "Blanc": "#ffffff",
         "Jaune": "#fee60c",
         "fond2": "#efebea",
-        "gris clair": "#cccccc",
+        "grisClair": "#cccccc",
         "gris3": "#9f9f9f"
       },
       "fontSize": {

@@ -14,6 +14,12 @@ import ProfilPaiementView from '../views/ProfilPaiementView.vue'
 import ProfilEditView from '../views/ProfilEditView.vue'
 import ConnexionView from '../views/ConnexionView.vue'
 import InscriptionView from '../views/InscriptionView.vue'
+import Notification from '../components/Notification.vue'
+import Securite from '../components/Securite.vue'
+import Aide from '../components/Aide.vue'
+
+
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -88,7 +94,14 @@ const router = createRouter({
       name: 'inscription',
       component: InscriptionView
     },
-    { path: '/Guide', name: 'GuideView', component: GuideView }
+    { path: '/Guide', name: 'GuideView', component: GuideView },
+
+    { path: '/Notification', name: 'Notification', component: Notification },
+    { path: '/Securite', name: 'Securite', component: Securite },
+    { path: '/Aide', name: 'Aide', component: Aide }
+
+
+
   ]
 })
 

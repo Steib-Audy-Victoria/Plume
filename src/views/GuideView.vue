@@ -5,6 +5,7 @@
   <CategorieBouton></CategorieBouton>
   <CardCommande2></CardCommande2>
   <CardAPropos></CardAPropos>
+  <Notification></Notification>
 </template>
 
 <script >
@@ -14,6 +15,7 @@ import CardCommande from "../components/CardCommande.vue";
 import CardCommande2 from "../components/CardCommande2.vue";
 import CategorieBouton from "../components/CategorieBouton.vue";
 import CardAPropos from "../components/CardAPropos.vue";
+import Notification from "../components/Notification.vue";
 
 export default {
   name: "App",
@@ -24,6 +26,7 @@ export default {
     CategorieBouton,
     CardCommande2,
     CardAPropos,
+    Notification,
   },
 };
 </script>
