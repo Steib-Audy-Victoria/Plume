@@ -2,7 +2,7 @@
   <CardArtisteRecherche></CardArtisteRecherche>
   <PostFeed></PostFeed>
   <CardCommande></CardCommande>
-  <CategorieBouton></CategorieBouton>
+  <CategorieBouton CatBtn="Manga"></CategorieBouton>
   <CardCommande2></CardCommande2>
   <CardAPropos></CardAPropos>
   <Notification></Notification>

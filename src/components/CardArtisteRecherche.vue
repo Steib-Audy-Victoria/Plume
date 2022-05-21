@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="border-gradient-l-ligne border-2 rounded-xl border-solid w-max m-5"
-  >
+  <div class="border-2 border-gradient-l-ligne w-max m-5">
     <div class="flex justify-start items-center">
       <img src="public/img/img_profil.jpg" class="object-none rounded-full" />
       <p
@@ -14,3 +12,4 @@
     <img src="public/img/monster.jpg" class="object-cover rounded-b-xl" />
   </div>
 </template>
+

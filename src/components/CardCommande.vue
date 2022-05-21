@@ -1,14 +1,6 @@
 <template>
   <div
-    class="
-      w-max
-      flex
-      justify-evenly
-      border-2 border-gradient-br-ligne
-      rounded-lg
-      p-1
-      m-5
-    "
+    class="w-max flex justify-evenly border-2 border-gradient-br-ligne p-1 m-5"
   >
     <div class="grid content-around">
       <div>

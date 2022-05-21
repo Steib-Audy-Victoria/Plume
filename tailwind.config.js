@@ -16,12 +16,10 @@ module.exports = {
         "fond2": "#efebea",
         "grisClair": "#cccccc",
         "gris3": "#9f9f9f",
-        "ligne": ["#fba919", "#ff0000"]
+
       },
 
-      "linearBorderGradients": theme => ({
-        colors: theme('colors')
-      }),
+
 
       "fontSize": {
         "titre": "7.5rem"
@@ -35,6 +33,11 @@ module.exports = {
       "width": {
         "300": "18.75rem, 300px",
       }
+    },
+    linearBorderGradients: {
+      "colors": {
+        "ligne": ["#fba919", "#ff0000"]
+      },
     },
   },
   plugins: [

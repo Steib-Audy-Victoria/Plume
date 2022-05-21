@@ -1,5 +1,5 @@
 <template>
-  <div class="w-max border-2 border-Rouge rounded-xl p-3">
+  <div class="w-max border-2 border-gradient-l-ligne rounded-xl p-3">
     <div class="rounded-3xl bg-white"></div>
     <img src="public/img/monster.jpg" class="object-cover pb-3" />
     <div class="flex justify-between">
