@@ -24,19 +24,23 @@
       <div class="col-start-2">
         <div>
           <p class="text-white font-baloo text-lg px-2">PSEUDO / MAIL</p>
-          <input
-            class="w-full border-Rouge border-2 rounded-lg"
-            type="text"
-            placeholder="Insérez du texte"
-          />
+          <div class="bg-gradient-to-r to-Orange from-Rouge rounded-lg p-0.5">
+            <input
+              class="w-full rounded-lg placeholder:pl-2"
+              type="text"
+              placeholder="Insérez du texte"
+            />
+          </div>
         </div>
         <div class="">
           <p class="text-white font-baloo text-lg px-2">MOT DE PASSE</p>
-          <input
-            class="w-full border-Rouge border-2 rounded-lg"
-            type="text"
-            placeholder="Insérez du texte"
-          />
+          <div class="bg-gradient-to-r to-Orange from-Rouge rounded-lg p-0.5">
+            <input
+              class="w-full rounded-lg placeholder:pl-2"
+              type="text"
+              placeholder="Insérez du texte"
+            />
+          </div>
         </div>
       </div>
     </div>
