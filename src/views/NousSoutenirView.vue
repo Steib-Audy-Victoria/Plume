@@ -43,6 +43,10 @@
     </div>
   </div>
 
+  <div class="flex justify-center">
+    <BoutonAPropos MsgBtn="Faire un don"></BoutonAPropos>
+  </div>
+
   <div class="pl-6 mt-8">
     <h3 class="font-baloo font-bold text-xl">Pourquoi nous aider ?</h3>
     <div class="flex items-center py-4">
@@ -69,13 +73,18 @@
       </p>
     </div>
   </div>
+
+  <div class="flex justify-center mb-4">
+    <BoutonAPropos MsgBtn="A propos"></BoutonAPropos>
+  </div>
 </template>
 
 <script>
 import PlumeB from "../components/icons/PlumeB.vue";
+import BoutonAPropos from "../components/BoutonAPropos.vue";
 
 export default {
   name: "App",
-  components: { PlumeB },
+  components: { PlumeB, BoutonAPropos },
 };
 </script>

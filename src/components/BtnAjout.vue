@@ -1,9 +1,7 @@
 <template>
   <button
     class="
-      text-xl
-      bg-red-600
-      text-white
+      text-xl text-white
       rounded-xl
       font-semiboldfont-baloo
       w-64

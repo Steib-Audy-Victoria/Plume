@@ -1,13 +1,14 @@
 <template>
   <button
     class="
-      text-xl
-      bg-red-600
-      text-white
+      text-xl text-white
       rounded-xl
       font-semiboldfont-baloo
       w-64
       h-12
+      bg-gradient-to-l
+      to-Rouge
+      from-Orange
     "
   >
     {{ MsgBtn }}
