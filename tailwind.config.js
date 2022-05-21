@@ -15,11 +15,12 @@ module.exports = {
         "Jaune": "#fee60c",
         "fond2": "#efebea",
         "grisClair": "#cccccc",
-        "gris3": "#9f9f9f"
+        "gris3": "#9f9f9f",
+        "ligne": ["#fba919", "#ff0000"]
       },
 
       "linearBorderGradients": theme => ({
-        colors: theme('colors'),
+        colors: theme('colors')
       }),
 
       "fontSize": {
@@ -36,6 +37,9 @@ module.exports = {
       }
     },
   },
-  plugins: [require('prettier-plugin-tailwindcss'), require('tailwindcss-border-gradients')()],
+  plugins: [
+    require('prettier-plugin-tailwindcss'),
+    require('tailwindcss-border-gradients')(),
+  ],
 
 }

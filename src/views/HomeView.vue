@@ -16,7 +16,7 @@
   <div>
     <div>
       <p class="font-baloo text-4xl w-1/5">NOUVELLE COMMANDE</p>
-      <hr class="my-2 border-1 border-Rouge w-1/3" />
+      <hr class="my-2 border-1 border-gradient-r-ligne w-1/3" />
     </div>
     <div class="flex justify-center">
       <BtnAjout></BtnAjout>
@@ -24,7 +24,7 @@
   </div>
   <div>
     <p class="font-baloo text-4xl w-1/5">COMMANDE EN COURS</p>
-    <hr class="my-2 border-1 border-Rouge w-1/3" />
+    <hr class="my-2 border-1 border-gradient-r-ligne w-1/3" />
     <div
       class="
         flex flex-col
@@ -38,7 +38,7 @@
   </div>
   <div>
     <p class="font-baloo text-4xl w-1/5">COMMANDES PASSÉES</p>
-    <hr class="my-2 border-1 border-Rouge w-1/3" />
+    <hr class="my-2 border-1 border-gradient-r-ligne w-1/3" />
     <div
       class="
         flex flex-col
