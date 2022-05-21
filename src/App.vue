@@ -56,6 +56,14 @@
           <form class="flex flex-col" action="#">
             <label for="email"></label>
             <input
+              class="
+                rounded-lg
+                placeholder:pl-5
+                bg-Gris
+                placeholder:text-grisClair
+                placeholder:font-baloo
+                placeholder:text-lg
+              "
               type="email"
               id="email"
               name="email"
@@ -63,13 +71,34 @@
             />
             <label for="msg"></label>
             <textarea
+              class="
+                rounded-lg
+                placeholder:pl-5
+                my-2
+                bg-Gris
+                placeholder:text-grisClair
+                placeholder:font-baloo
+                placeholder:text-lg
+              "
               name="message"
               id="msg"
               cols="30"
               rows="10"
               placeholder="Votre message"
             ></textarea>
-            <button class="rounded-lg bg-Orange text-white" type="submit">
+            <button
+              class="
+                rounded-lg
+                bg-Orange
+                text-white
+                w-max
+                p-2
+                px-5
+                font-baloo font-semibold
+                text-xl
+              "
+              type="submit"
+            >
               Envoyer
             </button>
           </form>
