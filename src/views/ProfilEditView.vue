@@ -18,7 +18,15 @@
           <p class="py-2">Lorem ipsum bla bla bla</p>
           <p class="py-2">bla bla bla .com</p>
         </div>
-        <div class="grid grid-cols-3 place-items-center">
+        <div
+          class="
+            grid
+            xl:grid-cols-3
+            md:grid-cols-2
+            xs:grid-cols-1
+            place-items-center
+          "
+        >
           <CategorieBouton CatBtn="Manga"></CategorieBouton>
           <CategorieBouton CatBtn="Comics"></CategorieBouton>
           <CategorieBouton CatBtn="Réaliste"></CategorieBouton>
