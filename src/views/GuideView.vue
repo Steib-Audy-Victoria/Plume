@@ -9,6 +9,8 @@
   <BoutonAPropos MsgBtn="Faire un don"></BoutonAPropos>
   <BtnConIns MsgBtn="Se connecter"></BtnConIns>
   <BoutonConnexion></BoutonConnexion>
+
+  <Message></Message>
 </template>
 
 <script >
@@ -22,6 +24,7 @@ import Notification from "../components/Notification.vue";
 import BoutonAPropos from "../components/BoutonAPropos.vue";
 import BtnConIns from "../components/BtnConIns.vue";
 import BoutonConnexion from "../components/BoutonConnexion.vue";
+import Message from "../components/Message.vue";
 
 export default {
   name: "App",
@@ -36,6 +39,7 @@ export default {
     BoutonAPropos,
     BtnConIns,
     BoutonConnexion,
+    Message,
   },
 };
 </script>

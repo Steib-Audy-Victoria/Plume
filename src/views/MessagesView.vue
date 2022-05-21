@@ -1,15 +1,20 @@
 <template>
-  <div class="messages">
-    <h1>Ceci est la page messages</h1>
+  <div class="pt-16 flex flex-col place-items-center">
+    <MessageBtn
+      Pseudo="Alex H."
+      Message="Oui pas de soucis je fais ça "
+    ></MessageBtn>
+    <MessageBtn
+      Pseudo="Claire A."
+      Message="Bonne journée à vous ! "
+    ></MessageBtn>
   </div>
 </template>
 
-<style>
-@media (min-width: 1024px) {
-  .apropos {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
-</style>
+<script>
+import MessageBtn from "../components/MessageBtn.vue";
+
+export default {
+  components: { MessageBtn },
+};
+</script>
