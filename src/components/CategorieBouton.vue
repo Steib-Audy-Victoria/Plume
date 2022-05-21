@@ -1,17 +1,19 @@
 <template>
-  <button
-    class="
-      w-max
-      p-1
-      h-24px
-      rounded-3xl
-      border-2 border-gradient-l-ligne
-      font-baloo font-semibold
-      px-3
-    "
-  >
-    {{ CatBtn }}
-  </button>
+  <div class="bg-gradient-to-r to-Orange from-Rouge w-max rounded-3xl p-0.5">
+    <button
+      class="
+        w-max
+        p-1
+        h-24px
+        rounded-3xl
+        font-baloo font-semibold
+        px-3
+        bg-white
+      "
+    >
+      {{ CatBtn }}
+    </button>
+  </div>
 </template>
 
 <script>

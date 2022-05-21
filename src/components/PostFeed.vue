@@ -1,10 +1,12 @@
 <template>
-  <div class="w-max border-2 border-gradient-l-ligne rounded-xl p-3">
-    <div class="rounded-3xl bg-white"></div>
-    <img src="public/img/monster.jpg" class="object-cover pb-3" />
-    <div class="flex justify-between">
-      <p class="text-xl font-semibold text-left text-black">Clément B.</p>
-      <Heart></Heart>
+  <div class="bg-gradient-to-r to-Orange from-Rouge p-0.5 w-max rounded-xl m-3">
+    <div class="bg-white p-0.5 w-max rounded-xl">
+      <div class="rounded-3xl bg-white"></div>
+      <img src="public/img/monster.jpg" class="object-cover p-3" />
+      <div class="flex justify-between p-1">
+        <p class="text-xl font-semibold text-left text-black">Clément B.</p>
+        <Heart></Heart>
+      </div>
     </div>
   </div>
 </template>
