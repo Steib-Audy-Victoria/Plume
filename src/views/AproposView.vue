@@ -23,9 +23,27 @@
       place-items-center
     "
   >
-    <CardAPropos></CardAPropos>
-    <CardAPropos></CardAPropos>
-    <CardAPropos></CardAPropos>
+    <CardAPropos
+      Nom="Antonin Heuguet"
+      Info="Étudiant"
+      Fonction="MAQUETTE"
+      Mail="antonin.heuguet@edu.univ-fcomte.fr"
+      image="public/img/img_antonin.jpg"
+    ></CardAPropos>
+    <CardAPropos
+      Nom="Loup Lobato"
+      Info="Étudiant"
+      Fonction="ÉLÉMENTS GRAPHIQUES"
+      Mail="loup.lobato@edu.univ-fcomte.fr"
+      image="public/img/img_loup.jpg"
+    ></CardAPropos>
+    <CardAPropos
+      Nom="Victoria Steib-Audy"
+      Info="Étudiante"
+      Fonction="DÉVELOPPEMENT"
+      Mail="victoria.steib—audy@edu.univ-fcomte.fr"
+      image="public/img/img_victoria.jpg"
+    ></CardAPropos>
   </div>
 </template>
 
