@@ -17,6 +17,11 @@ module.exports = {
         "grisClair": "#cccccc",
         "gris3": "#9f9f9f"
       },
+
+      "linearBorderGradients": theme => ({
+        colors: theme('colors'),
+      }),
+
       "fontSize": {
         "titre": "7.5rem"
       },
@@ -25,16 +30,12 @@ module.exports = {
         "baloo": "Baloo 2, cursive ",
 
       },
-      "boxShadow": {
-        "image_3d": "6px 4px 0px 0px rgba(170,9,94,1)",
-        "bpx_landingpage": "-15px 13px 6px 22px rgba(0,0,0,0.1)"
-      },
 
       "width": {
         "300": "18.75rem, 300px",
-
       }
     },
   },
-  plugins: [require('prettier-plugin-tailwindcss')],
+  plugins: [require('prettier-plugin-tailwindcss'), require('tailwindcss-border-gradients')()],
+
 }
