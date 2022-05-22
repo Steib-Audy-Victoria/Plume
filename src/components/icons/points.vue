@@ -1,0 +1,31 @@
+<template>
+  <svg
+    width="7"
+    height="24"
+    viewBox="0 0 7 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <ellipse
+      cx="3.68013"
+      cy="3.56373"
+      rx="2.71043"
+      ry="2.71058"
+      fill="#C4C4C4"
+    />
+    <ellipse
+      cx="3.68013"
+      cy="12.2376"
+      rx="2.71043"
+      ry="2.71058"
+      fill="#C4C4C4"
+    />
+    <ellipse
+      cx="3.68013"
+      cy="20.9114"
+      rx="2.71043"
+      ry="2.71058"
+      fill="#C4C4C4"
+    />
+  </svg>
+</template>

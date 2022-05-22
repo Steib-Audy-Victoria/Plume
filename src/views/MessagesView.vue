@@ -9,12 +9,15 @@
       Message="Bonne journée à vous ! "
     ></MessageBtn>
   </div>
+
+  <Message></Message>
 </template>
 
 <script>
 import MessageBtn from "../components/MessageBtn.vue";
+import Message from "../components/Message.vue";
 
 export default {
-  components: { MessageBtn },
+  components: { MessageBtn, Message },
 };
 </script>
