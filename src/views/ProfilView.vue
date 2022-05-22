@@ -12,12 +12,46 @@
         <RouterLink to="/ProfilEdit"><edit></edit></RouterLink>
       </div>
     </div>
-    <div class="grid grid-cols-2">
+    <div class="grid grid-cols-2 mb-12">
       <div class="flex justify-center">
-        <imageD></imageD>
+        <imageD
+          v-on:click="imageHidden = !imageHidden"
+          class="cursor-pointer"
+        ></imageD>
       </div>
       <div class="flex justify-center">
-        <heartB></heartB>
+        <heartB
+          v-on:click="favoriHidden = !favoriHidden"
+          class="cursor-pointer"
+        ></heartB>
+      </div>
+    </div>
+    <div v-show="!imageHidden">
+      <div
+        class="
+          flex flex-col
+          md:grid md:grid-cols-2
+          xl:grid-cols-3
+          place-items-center
+        "
+      >
+        <img src="public/img/monster.jpg" alt="" />
+        <img src="public/img/monster_dessin.jpg" alt="" />
+        <img src="public/img/dessin_dragon.jpg" alt="" />
+      </div>
+    </div>
+    <div v-show="!favoriHidden">
+      <div
+        class="
+          flex flex-col
+          md:grid md:grid-cols-2
+          xl:grid-cols-3
+          place-items-center
+        "
+      >
+        <img src="public/img/dessin_enfant.jpg" alt="" />
+        <img src="public/img/monster_dessin.jpg" alt="" />
+        <img src="public/img/dessin_dragon.jpg" alt="" />
       </div>
     </div>
   </div>
@@ -36,6 +70,26 @@ export default {
     imageD,
     heartB,
   },
+  data() {
+    return {
+      imageHidden: true,
+      favoriHidden: true,
+      // if imageHidden = false else favoriHidden = true,
+      // if favoriHidden = false else imageHidden = true
+    };
+  },
+
+  //  computed: {
+  //    showImage: function () {
+  //      var fSection = document.getElementById("filterImage");
+  //      if (fSection.classList.contains("hidden")) {
+  //        fSection.classList.remove("hidden");
+  //        fSection.classList.add("block");
+  //      } else {
+  //        fSection.classList.add("hidden");
+  //      }
+  //    },
+  //  },
 };
 </script>
 
