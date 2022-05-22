@@ -21,7 +21,9 @@
       <CategorieBouton CatBtn="Peinture"></CategorieBouton>
       <CategorieBouton CatBtn="Aquarelle"></CategorieBouton>
     </div>
-    <Btn MsgBtn="Commencer"></Btn>
+    <RouterLink to="/RechercheArtiste"
+      ><Btn MsgBtn="Commencer"></Btn
+    ></RouterLink>
   </div>
 </template>
 

@@ -12,11 +12,9 @@
     <div class="hidden">
       <nav>
         <RouterLink to="/Guide">Guide</RouterLink>
-        <RouterLink to="/Parametres">Parametres</RouterLink>
-        <RouterLink to="/NouvelleCommande">Nouvelle Commande</RouterLink>
-        <RouterLink to="/RechercheArtiste">Recherche Artiste</RouterLink>
+
         <RouterLink to="/ProfilPaiement">Profil Paiement</RouterLink>
-        <RouterLink to="/ProfilEdit">Profil Edit</RouterLink>
+
         <RouterLink to="/Inscription">Inscription</RouterLink>
         <RouterLink to="/Connexion">Connexion</RouterLink>
       </nav>

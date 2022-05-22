@@ -5,11 +5,11 @@
         <img src="public/img/img_profil.jpg" alt="" />
       </div>
       <div class="flex justify-center mt-2">
-        <settings></settings>
+        <RouterLink to="/Parametres"><settings></settings></RouterLink>
         <p class="font-baloo font-semibold text-xl text-center px-5">
           Laura_mg0t
         </p>
-        <edit></edit>
+        <RouterLink to="/ProfilEdit"><edit></edit></RouterLink>
       </div>
     </div>
     <div class="grid grid-cols-2">

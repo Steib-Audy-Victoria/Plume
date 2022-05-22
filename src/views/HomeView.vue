@@ -19,7 +19,7 @@
       <hr class="my-2 border-1 border-gradient-r-ligne w-1/3" />
     </div>
     <div class="flex justify-center">
-      <BtnAjout></BtnAjout>
+      <RouterLink to="/NouvelleCommande"><BtnAjout></BtnAjout></RouterLink>
     </div>
   </div>
   <div>
