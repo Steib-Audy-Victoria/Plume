@@ -75,7 +75,9 @@
       </div>
     </div>
     <div class="py-5">
-      btn
+      <div class="flex justify-center items-center">
+        <BtnArtisteClient></BtnArtisteClient>
+      </div>
       <div class="flex justify-center">
         <BtnConIns MsgBtn="S'inscrire"></BtnConIns>
       </div>
@@ -94,12 +96,14 @@
 <script >
 import BoutonConnexion from "../components/BoutonConnexion.vue";
 import BtnConIns from "../components/BtnConIns.vue";
+import BtnArtisteClient from "../components/BtnArtisteClient.vue";
 
 export default {
   name: "App",
   components: {
     BoutonConnexion,
     BtnConIns,
+    BtnArtisteClient,
   },
 };
 </script>

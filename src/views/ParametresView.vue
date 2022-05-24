@@ -10,7 +10,17 @@
         <RouterLink to="/Aide"><p class="py-4">AIDE</p></RouterLink>
         <RouterLink to="/apropos"><p class="py-4">A PROPOS</p></RouterLink>
       </div>
+      <div class="flex justify-center items-center">
+        <BtnArtisteClient></BtnArtisteClient>
+      </div>
     </div>
   </div>
 </template>
 
+<script>
+import BtnArtisteClient from "../components/BtnArtisteClient.vue";
+
+export default {
+  components: { BtnArtisteClient },
+};
+</script>
