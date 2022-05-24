@@ -9,7 +9,7 @@
   <BoutonAPropos MsgBtn="Faire un don"></BoutonAPropos>
   <BtnConIns MsgBtn="Se connecter"></BtnConIns>
   <BoutonConnexion></BoutonConnexion>
-
+  <BtnArtisteClient></BtnArtisteClient>
   <Message></Message>
 </template>
 
@@ -25,6 +25,7 @@ import BoutonAPropos from "../components/BoutonAPropos.vue";
 import BtnConIns from "../components/BtnConIns.vue";
 import BoutonConnexion from "../components/BoutonConnexion.vue";
 import Message from "../components/Message.vue";
+import BtnArtisteClient from "../components/BtnArtisteClient.vue";
 
 export default {
   name: "App",
@@ -40,6 +41,7 @@ export default {
     BtnConIns,
     BoutonConnexion,
     Message,
+    BtnArtisteClient,
   },
 };
 </script>

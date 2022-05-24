@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-16 bg-Pourpre">
+  <div class="pt-16 bg-[url('public/img/Fond.webp')] bg-cover">
     <h1 class="font-praise text-titre text-white text-center">Plume</h1>
     <div class="flex flex-col place-items-center my-10">
       <BoutonConnexion

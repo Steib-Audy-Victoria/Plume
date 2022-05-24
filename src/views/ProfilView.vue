@@ -15,13 +15,23 @@
     <div class="grid grid-cols-2 mb-12">
       <div class="flex justify-center">
         <imageD
-          v-on:click="imageHidden = !imageHidden"
+          v-on:click="
+            {
+              imageHidden = !imageHidden;
+              favoriHidden = !favoriHidden;
+            }
+          "
           class="cursor-pointer"
         ></imageD>
       </div>
       <div class="flex justify-center">
         <heartB
-          v-on:click="favoriHidden = !favoriHidden"
+          v-on:click="
+            {
+              favoriHidden = !favoriHidden;
+              imageHidden = !imageHidden;
+            }
+          "
           class="cursor-pointer"
         ></heartB>
       </div>
@@ -73,23 +83,9 @@ export default {
   data() {
     return {
       imageHidden: true,
-      favoriHidden: true,
-      // if imageHidden = false else favoriHidden = true,
-      // if favoriHidden = false else imageHidden = true
+      favoriHidden: false,
     };
   },
-
-  //  computed: {
-  //    showImage: function () {
-  //      var fSection = document.getElementById("filterImage");
-  //      if (fSection.classList.contains("hidden")) {
-  //        fSection.classList.remove("hidden");
-  //        fSection.classList.add("block");
-  //      } else {
-  //        fSection.classList.add("hidden");
-  //      }
-  //    },
-  //  },
 };
 </script>
 
