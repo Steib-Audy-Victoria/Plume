@@ -51,7 +51,7 @@
           Nous contacter
         </h2>
         <div class="col-start-2">
-          <form class="flex flex-col" action="#">
+          <form class="flex flex-col mr-6" action="#">
             <label for="email"></label>
             <input
               class="

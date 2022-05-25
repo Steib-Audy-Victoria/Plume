@@ -1,6 +1,6 @@
 <template>
-  <div class="flex justify-center p-32">
-    <div class="bg-black w-2/3 h-full p-10">
+  <div class="flex justify-center lg:p-32 p-2 py-16">
+    <div class="bg-black w-2/3 h-full p-3 lg:p-10">
       <div class="flex flex-col place-items-center">
         <h2 class="text-xl font-semibold text-center text-white py-2">
           Notifications
