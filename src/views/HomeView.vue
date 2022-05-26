@@ -4,7 +4,10 @@
       class="
         font-praise
         text-titre text-transparent
-        p-4
+        p-2
+        pt-24
+        lg:pt-10
+        xl:pt-3
         bg-gradient-to-l bg-clip-text
         to-Rouge
         from-Orange
@@ -28,7 +31,7 @@
       <RouterLink to="/Connexion">Se connecter</RouterLink>
     </button>
   </div>
-  <div>
+  <div class="pb-8">
     <div>
       <p class="font-baloo text-4xl w-1/5">NOUVELLE COMMANDE</p>
       <hr class="my-2 border-1 border-gradient-r-ligne w-1/3" />
@@ -37,7 +40,7 @@
       <RouterLink to="/NouvelleCommande"><BtnAjout></BtnAjout></RouterLink>
     </div>
   </div>
-  <div>
+  <div class="pb-8">
     <p class="font-baloo text-4xl w-1/5">COMMANDE EN COURS</p>
     <hr class="my-2 border-1 border-gradient-r-ligne w-1/3" />
     <div
@@ -51,7 +54,7 @@
       <CardCommande></CardCommande>
     </div>
   </div>
-  <div>
+  <div class="pb-8">
     <p class="font-baloo text-4xl w-1/5">COMMANDES PASSÉES</p>
     <hr class="my-2 border-1 border-gradient-r-ligne w-1/3" />
     <div
