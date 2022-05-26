@@ -95,6 +95,7 @@ import {
   signInWithEmailAndPassword,
   signOut,
 } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-auth.js";
+import { emitter } from "../main.js";
 
 export default {
   name: "Connexion",
@@ -122,8 +123,9 @@ export default {
     onCnx() {
       signInWithEmailAndPassword(getAuth(), this.user.email, this.user.password)
         .then((response) => {
-          console.log("user connecté", response.user);
           this.user = response.user;
+          emitter.emit("connectUser", { user: this.user });
+          console.log("user", this.user);
           this.message = "User connecté : " + this.user.email;
         })
         .catch((error) => {
@@ -135,13 +137,12 @@ export default {
     onDcnx() {
       signOut(getAuth())
         .then((response) => {
-          this.user = getAuth().currentUser;
+          this.message = "User non connecté";
           this.user = {
             email: null,
             password: null,
           };
-          console.log("user deconnecté", this.user);
-          this.message = "User non connecté";
+          emitter.emit("deconnectUser", { user: this.user });
         })
         .catch((error) => {
           console.log("erreur de deconnexion", error);

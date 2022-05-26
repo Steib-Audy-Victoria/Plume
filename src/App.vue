@@ -127,6 +127,7 @@ import twitter from "./components/icons/twitter.vue";
 import users from "./components/icons/users.vue";
 import home from "./components/icons/home.vue";
 import message from "./components/icons/message.vue";
+import { emitter } from "./main.js";
 
 export default {
   name: "App",
@@ -140,6 +141,24 @@ export default {
     users,
     home,
     message,
+  },
+  data() {
+    return {
+      user: {
+        email: null,
+        password: null,
+      },
+    };
+  },
+  mounted() {
+    emitter.on("connectUser", (e) => {
+      this.user = e.user;
+      console.log("App => Reception user connecté", this.user);
+    });
+    emitter.on("deconnectUser", (e) => {
+      this.user = e.user;
+      console.log("App => Reception user deconnecté", this.user);
+    });
   },
 };
 </script>

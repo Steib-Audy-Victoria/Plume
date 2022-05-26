@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@heroicons/vue": "^1.0.6",
+    "mitt": "^3.0.0",
     "tailwindcss-border-gradients": "^2.0.3",
     "vue": "^3.2.31",
     "vue-heroicons": "^0.9.4",
