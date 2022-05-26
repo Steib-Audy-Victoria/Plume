@@ -87,7 +87,9 @@
         <hr class="my-1 pb-2 border-3 border-white w-1/4" />
       </div>
       <div class="flex justify-center">
-        <BtnConIns MsgBtn="Se connecter"></BtnConIns>
+        <RouterLink to="/Connexion"
+          ><BtnConIns MsgBtn="Se connecter"></BtnConIns
+        ></RouterLink>
       </div>
     </div>
   </div>

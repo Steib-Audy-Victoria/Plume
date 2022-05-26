@@ -14,9 +14,6 @@
         <RouterLink to="/Guide">Guide</RouterLink>
 
         <RouterLink to="/ProfilPaiement">Profil Paiement</RouterLink>
-
-        <RouterLink to="/Inscription">Inscription</RouterLink>
-        <RouterLink to="/Connexion">Connexion</RouterLink>
       </nav>
     </div>
     <div class="bg-black flex justify-between p-3 fixed bottom-0 w-full">

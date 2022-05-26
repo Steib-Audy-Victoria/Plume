@@ -13,6 +13,21 @@
       Plume
     </h1>
   </div>
+  <div class="absolute top-14 left-48">
+    <button
+      class="
+        bg-Pourpre
+        rounded-lg
+        text-center
+        font-semibold
+        text-2xl text-white
+        px-8
+        py-3
+      "
+    >
+      <RouterLink to="/Connexion">Se connecter</RouterLink>
+    </button>
+  </div>
   <div>
     <div>
       <p class="font-baloo text-4xl w-1/5">NOUVELLE COMMANDE</p>
