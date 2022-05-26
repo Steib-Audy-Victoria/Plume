@@ -20,57 +20,143 @@
       <p class="text-white font-baloo text-xl px-2">OU</p>
       <hr class="my-1 pb-2 border-3 border-white w-1/4" />
     </div>
-    <div class="grid grid-cols-3 mt-2">
-      <div class="col-start-2">
-        <div>
-          <p class="text-white font-baloo text-lg px-2">PSEUDO / MAIL</p>
-          <div class="bg-gradient-to-r to-Orange from-Rouge rounded-lg p-0.5">
-            <input
-              class="w-full rounded-lg placeholder:pl-2"
-              type="text"
-              placeholder="Insérez du texte"
-            />
+    <form @submit.prevent="onCnx">
+      <div class="grid grid-cols-3 mt-2">
+        <div class="col-start-2">
+          <div>
+            <p class="text-white font-baloo text-lg px-2">EMAIL</p>
+            <div class="bg-gradient-to-r to-Orange from-Rouge rounded-lg p-0.5">
+              <input
+                class="w-full rounded-lg placeholder:pl-2"
+                type="email"
+                placeholder="Adresse mail"
+                v-model="user.email"
+                required
+              />
+            </div>
+          </div>
+          <div class="">
+            <p class="text-white font-baloo text-lg px-2">MOT DE PASSE</p>
+            <div
+              class="
+                bg-gradient-to-r
+                to-Orange
+                from-Rouge
+                rounded-lg
+                p-0.5
+                flex
+              "
+            >
+              <input
+                class="w-full rounded-lg placeholder:pl-2"
+                placeholder="Mot de passe"
+                :type="type"
+                v-model="user.password"
+                required
+              />
+              <button class="w-6" @click.prevent="affiche()">
+                <EyeIcon></EyeIcon>
+              </button>
+            </div>
           </div>
         </div>
-        <div class="">
-          <p class="text-white font-baloo text-lg px-2">MOT DE PASSE</p>
-          <div class="bg-gradient-to-r to-Orange from-Rouge rounded-lg p-0.5">
-            <input
-              class="w-full rounded-lg placeholder:pl-2"
-              type="text"
-              placeholder="Insérez du texte"
-            />
-          </div>
+      </div>
+      <div class="py-5">
+        <div class="flex justify-center">
+          <BtnConIns type="submit" MsgBtn="Se connecter"></BtnConIns>
+        </div>
+        <div role="alert">{{ message }}</div>
+        <BtnConIns
+          type="button"
+          MsgBtn="Deconnexion"
+          @click="onDcnx()"
+        ></BtnConIns>
+        <div class="flex justify-center items-center m-2">
+          <hr class="my-1 pb-2 border-3 border-white w-1/4" />
+          <p class="text-white font-baloo text-xl px-2">OU</p>
+          <hr class="my-1 pb-2 border-3 border-white w-1/4" />
+        </div>
+        <div class="flex justify-center">
+          <RouterLink to="/Inscription"
+            ><BtnConIns MsgBtn="S'inscrire"></BtnConIns
+          ></RouterLink>
         </div>
       </div>
-    </div>
-    <div class="py-5">
-      <div class="flex justify-center">
-        <BtnConIns MsgBtn="Se connecter"></BtnConIns>
-      </div>
-      <div class="flex justify-center items-center m-2">
-        <hr class="my-1 pb-2 border-3 border-white w-1/4" />
-        <p class="text-white font-baloo text-xl px-2">OU</p>
-        <hr class="my-1 pb-2 border-3 border-white w-1/4" />
-      </div>
-      <div class="flex justify-center">
-        <RouterLink to="/Inscription"
-          ><BtnConIns MsgBtn="S'inscrire"></BtnConIns
-        ></RouterLink>
-      </div>
-    </div>
+    </form>
   </div>
 </template>
 
 <script >
 import BoutonConnexion from "../components/BoutonConnexion.vue";
 import BtnConIns from "../components/BtnConIns.vue";
+import { EyeIcon } from "@heroicons/vue/outline";
+import {
+  getAuth,
+  signInWithEmailAndPassword,
+  signOut,
+} from "https://www.gstatic.com/firebasejs/9.7.0/firebase-auth.js";
 
 export default {
-  name: "App",
+  name: "Connexion",
   components: {
     BoutonConnexion,
     BtnConIns,
+    EyeIcon,
+  },
+  data() {
+    return {
+      user: {
+        email: "",
+        password: "",
+      },
+      message: null,
+      view: false,
+      type: "password",
+      imageData: null,
+    };
+  },
+  mounted() {
+    this.message = "User non connecté";
+  },
+  methods: {
+    onCnx() {
+      signInWithEmailAndPassword(getAuth(), this.user.email, this.user.password)
+        .then((response) => {
+          console.log("user connecté", response.user);
+          this.user = response.user;
+          this.message = "User connecté : " + this.user.email;
+        })
+        .catch((error) => {
+          console.log("Erreur de connexion", error);
+          this.message = "Erreur d'authentification";
+        });
+    },
+
+    onDcnx() {
+      signOut(getAuth())
+        .then((response) => {
+          this.user = getAuth().currentUser;
+          this.user = {
+            email: null,
+            password: null,
+          };
+          console.log("user deconnecté", this.user);
+          this.message = "User non connecté";
+        })
+        .catch((error) => {
+          console.log("erreur de deconnexion", error);
+        });
+    },
+
+    //afficher / masquer password
+    affiche() {
+      this.view = !this.view;
+      if (this.view) {
+        this.type = "text";
+      } else {
+        this.type = "password";
+      }
+    },
   },
 };
 </script>
