@@ -1,18 +1,18 @@
 <template>
-  <div class="pt-16 bg-[url('public/img/Fond.webp')] bg-cover">
+  <div class="pt-16 bg-[url('/img/Fond.webp')] bg-cover">
     <h1 class="font-praise text-titre text-white text-center">Plume</h1>
     <div class="flex flex-col place-items-center my-10">
       <BoutonConnexion
         MsgBtn="Connexion avec Google"
-        image="/public/img/Google.png"
+        image="/img/Google.png"
       ></BoutonConnexion>
       <BoutonConnexion
         MsgBtn="Connexion avec Apple"
-        image="/public/img/Apple.png"
+        image="/img/Apple.png"
       ></BoutonConnexion>
       <BoutonConnexion
         MsgBtn="Connexion avec Facebook"
-        image="/public/img/Facebook.png"
+        image="/img/Facebook.png"
       ></BoutonConnexion>
     </div>
     <div class="flex justify-center items-center">

@@ -8,11 +8,11 @@
     </div>
 
     <div class="flex flex-col place-items-center my-4">
-      <img src="public/img/Paypal.png" alt="" />
+      <img src="/img/Paypal.png" alt="" />
       <p class="text-white font-baloo text-lg my-2">OU</p>
-      <img src="public/img/AppleP.png" alt="" />
+      <img src="/img/AppleP.png" alt="" />
       <p class="text-white font-baloo text-lg my-2">OU</p>
-      <img src="public/img/CB.png" alt="" />
+      <img src="/img/CB.png" alt="" />
     </div>
 
     <div class="grid grid-cols-3 mt-2">

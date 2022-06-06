@@ -1,7 +1,7 @@
 <template>
   <div class="bg-gradient-to-t to-Orange from-Rouge pt-16">
     <div class="flex justify-center">
-      <img class="relative" src="public/img/profil.png" alt="" />
+      <img class="relative" src="/img/profil.png" alt="" />
       <camera class="absolute mt-4"></camera>
       <ajout class="absolute mt-14 ml-16"></ajout>
     </div>

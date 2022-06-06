@@ -2,7 +2,7 @@
   <div class="pt-16">
     <div class="mb-10">
       <div class="flex justify-center">
-        <img src="public/img/img_profil.jpg" alt="" />
+        <img src="/img/img_profil.jpg" alt="" />
       </div>
       <div class="flex justify-center mt-2">
         <RouterLink to="/Parametres"><settings></settings></RouterLink>
@@ -45,9 +45,9 @@
           place-items-center
         "
       >
-        <img src="public/img/monster.jpg" alt="" />
-        <img src="public/img/monster_dessin.jpg" alt="" />
-        <img src="public/img/dessin_dragon.jpg" alt="" />
+        <img src="/img/monster.jpg" alt="" />
+        <img src="/img/monster_dessin.jpg" alt="" />
+        <img src="/img/dessin_dragon.jpg" alt="" />
       </div>
     </div>
     <div v-show="!favoriHidden">
@@ -59,9 +59,9 @@
           place-items-center
         "
       >
-        <img src="public/img/dessin_enfant.jpg" alt="" />
-        <img src="public/img/monster_dessin.jpg" alt="" />
-        <img src="public/img/dessin_dragon.jpg" alt="" />
+        <img src="/img/dessin_enfant.jpg" alt="" />
+        <img src="/img/monster_dessin.jpg" alt="" />
+        <img src="/img/dessin_dragon.jpg" alt="" />
       </div>
     </div>
   </div>

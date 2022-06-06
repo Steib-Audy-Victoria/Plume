@@ -17,7 +17,7 @@
       </div>
       <div>
         <img
-          src="public/img/dessin_dragon.jpg"
+          src="/img/dessin_dragon.jpg"
           class="rounded-r-lg object-cover pt-4 pl-5"
         />
       </div>
