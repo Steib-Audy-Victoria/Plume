@@ -98,21 +98,21 @@
             <div v-if="disc.id == discussion.id">
               <div v-for="msg in sortMsgByDate(disc.msg)" :key="msg.date">
                 <div class="mb-3" v-if="msg.by == users.uid">
-                  <div class="">
+                  <div>
                     <div class="text-left ml-3 flex items-center">
                       <img class="avatar" :src="usersInfo[0].Image" />
                       {{ usersInfo[0].Pseudo }} - {{ dateFr(msg.date) }}
                     </div>
                   </div>
                   <div class="text-center mb-1">
-                    <div class="text-black bg-gris3 rounded-2xl p-10">
+                    <div class="text-black bg-gris3 rounded-2xl p-4">
                       <p>{{ msg.contenu }}</p>
                     </div>
                   </div>
                 </div>
                 <div v-if="msg.by == usersSelected.uid">
                   <div class="text-center">
-                    <div class="text-black bg-Orange rounded-2xl p-10">
+                    <div class="text-black bg-Orange rounded-2xl p-4">
                       <p>{{ msg.contenu }}</p>
                     </div>
                   </div>
