@@ -1,5 +1,5 @@
 <template>
-  <main class="pt-16">
+  <main class="pt-24">
     <div v-if="users == null">
       <h4 class="text-center" role="alert">
         Vous devez être connecté pour utiliser le Chat !!
@@ -7,7 +7,7 @@
     </div>
     <div v-else>
       <div>
-        <span>Sélectionner un utilisateur</span>
+        <span class="pr-2">Sélectionner un utilisateur</span>
         <select
           class="text-Rouge border border-Gris"
           v-model="usersSelected"
@@ -81,28 +81,30 @@
             <span class="text-Pourpre">{{ discussion.libelle }}</span>
           </h2>
           <hr />
-          <div class="flex gap-2">
+          <div class="flex justify-center gap-2 mt-2">
             <textarea
-              class="text-black bg-grisClair p-10 rounded-3xl"
-              rows="3"
+              class="text-black bg-grisClair p-2 rounded-3xl w-4/5"
+              rows="2"
               placeholder="Message"
               v-model="message"
             ></textarea>
-            <div>
-              <button @click="sendMsg()"><send></send></button>
+            <div class="flex self-end">
+              <button @click="sendMsg()">
+                <send></send>
+              </button>
             </div>
           </div>
           <div v-for="disc in chat" :key="disc.id">
             <div v-if="disc.id == discussion.id">
               <div v-for="msg in sortMsgByDate(disc.msg)" :key="msg.date">
-                <div v-if="msg.by == users.uid">
-                  <div>
-                    <div class="text-left">
+                <div class="mb-3" v-if="msg.by == users.uid">
+                  <div class="">
+                    <div class="text-left ml-3 flex items-center">
                       <img class="avatar" :src="usersInfo[0].Image" />
                       {{ usersInfo[0].Pseudo }} - {{ dateFr(msg.date) }}
                     </div>
                   </div>
-                  <div class="text-center">
+                  <div class="text-center mb-1">
                     <div class="text-black bg-gris3 rounded-2xl p-10">
                       <p>{{ msg.contenu }}</p>
                     </div>
@@ -115,7 +117,7 @@
                     </div>
                   </div>
                   <div>
-                    <div class="text-left">
+                    <div class="text-left ml-3 flex items-center">
                       <img class="avatar" :src="usersSelected.Image" />
                       {{ usersSelected.Pseudo }} - {{ dateFr(msg.date) }}
                     </div>
