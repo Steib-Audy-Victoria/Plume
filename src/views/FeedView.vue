@@ -55,7 +55,7 @@ export default {
       const firestore = getFirestore();
       const dbDessins = collection(firestore, "dessins");
       const query = await onSnapshot(dbDessins, (snapshot) => {
-        console.log("query", query);
+        //console.log("query", query);
         this.listeDessins = snapshot.docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),
@@ -66,13 +66,13 @@ export default {
           getDownloadURL(spaceRef)
             .then((url) => {
               personne.image = url;
-              console.log("personne", personne);
+              //console.log("personne", personne);
             })
             .catch((error) => {
               console.log("erreur downloadUrl", error);
             });
         });
-        console.log("listeDessins", this.listeDessins);
+        //console.log("listeDessins", this.listeDessins);
       });
     },
   },

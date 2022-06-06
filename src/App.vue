@@ -153,11 +153,11 @@ export default {
   mounted() {
     emitter.on("connectUser", (e) => {
       this.user = e.user;
-      console.log("App => Reception user connecté", this.user);
+      //console.log("App => Reception user connecté", this.user);
     });
     emitter.on("deconnectUser", (e) => {
       this.user = e.user;
-      console.log("App => Reception user deconnecté", this.user);
+      //console.log("App => Reception user deconnecté", this.user);
     });
   },
 };

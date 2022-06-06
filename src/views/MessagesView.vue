@@ -199,7 +199,7 @@ export default {
               console.log("erreur downloadurl", error);
             });
         });
-        console.log("listeUsers", this.listeUsers);
+        //console.log("listeUsers", this.listeUsers);
 
         this.usersInfo = this.listeUsers.filter(
           (users) => users.uid == this.users.uid
@@ -211,7 +211,7 @@ export default {
     },
 
     async selectUsers() {
-      console.log("users sélectionner", this.usersSelected);
+      //console.log("users sélectionner", this.usersSelected);
 
       this.message = null;
       const firestore = getFirestore();
@@ -224,7 +224,7 @@ export default {
           id: doc.id,
           ...doc.data(),
         }));
-        console.log("chatFrom", this.chatFrom);
+        //console.log("chatFrom", this.chatFrom);
 
         let list2 = [this.usersSelected.uid, this.users.uid];
         let q2 = query(dbChat, where("fil", "==", list2));
@@ -233,10 +233,10 @@ export default {
             id: doc.id,
             ...doc.data(),
           }));
-          console.log("chatTo", this.chatTo);
+          //console.log("chatTo", this.chatTo);
 
           this.chat = this.chatFrom.concat(this.chatTo);
-          console.log("chat", this.chat);
+          //console.log("chat", this.chat);
         });
       });
     },
