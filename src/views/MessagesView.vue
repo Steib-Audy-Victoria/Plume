@@ -1,6 +1,5 @@
 <template>
   <main class="pt-16">
-    <h1>Message</h1>
     <div v-if="users == null">
       <h4 class="text-center" role="alert">
         Vous devez être connecté pour utiliser le Chat !!
@@ -9,7 +8,11 @@
     <div v-else>
       <div>
         <span>Sélectionner un utilisateur</span>
-        <select v-model="usersSelected" @change="selectUsers">
+        <select
+          class="text-Rouge border border-Gris"
+          v-model="usersSelected"
+          @change="selectUsers"
+        >
           <option selected disabled value="">...</option>
           <option v-for="util in listeUsers" :key="util.uid" :value="util">
             {{ util.Pseudo }}
@@ -20,7 +23,10 @@
         <form @submit.prevent="createDisc()">
           <div class="flex gap-3">
             <div>
-              <span>Nouveau fil avec {{ usersSelected.Pseudo }}</span>
+              <span
+                >Nouveau fil avec
+                <span class="text-Rouge">{{ usersSelected.Pseudo }}</span></span
+              >
             </div>
             <input
               class="border border-Gris rounded-lg"
@@ -31,7 +37,10 @@
             <button type="submit" title="Création">Créer</button>
           </div>
         </form>
-        <h2>Vos fils de discussion avec : {{ usersSelected.Pseudo }}</h2>
+        <h2>
+          Vos fils de discussion avec :
+          <span class="text-Rouge"> {{ usersSelected.Pseudo }}</span>
+        </h2>
         <div v-if="chat.length > 0">
           <table>
             <tbody>
@@ -44,6 +53,7 @@
                 </td>
                 <td>
                   <button
+                    class="mx-2"
                     type="button"
                     @click="viewFil(disc)"
                     title="Voir ce fil"
@@ -51,6 +61,7 @@
                     <chat></chat>
                   </button>
                   <button
+                    class="mx-2"
                     type="button"
                     @click="deleteFil(disc)"
                     title="Supprimer ce fil"
@@ -62,14 +73,17 @@
             </tbody>
           </table>
         </div>
-        <div v-else>Aucun fil de discussion</div>
+        <div v-else class="text-center">Aucun fil de discussion</div>
         <hr />
         <div v-if="discussion != null">
-          <h2>Discussion : {{ discussion.libelle }}</h2>
+          <h2>
+            Discussion :
+            <span class="text-Pourpre">{{ discussion.libelle }}</span>
+          </h2>
           <hr />
-          <div>
+          <div class="flex gap-2">
             <textarea
-              class="msg"
+              class="text-black bg-grisClair p-10 rounded-3xl"
               rows="3"
               placeholder="Message"
               v-model="message"
@@ -89,14 +103,14 @@
                     </div>
                   </div>
                   <div class="text-center">
-                    <div class="recep">
+                    <div class="text-black bg-gris3 rounded-2xl p-10">
                       <p>{{ msg.contenu }}</p>
                     </div>
                   </div>
                 </div>
                 <div v-if="msg.by == usersSelected.uid">
                   <div class="text-center">
-                    <div class="emet">
+                    <div class="text-black bg-Orange rounded-2xl p-10">
                       <p>{{ msg.contenu }}</p>
                     </div>
                   </div>
@@ -324,26 +338,6 @@ export default {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-}
-.emet {
-  color: black;
-  background-color: lightyellow;
-  padding: 10px;
-  border-radius: 50px 20px;
-  word-wrap: break-word;
-}
-.recep {
-  color: black;
-  background-color: lightblue;
-  padding: 10px;
-  border-radius: 50px 20px;
-  word-wrap: break-word;
-}
-.msg {
-  color: black;
-  background-color: lightgrey;
-  padding: 10px;
-  border-radius: 20px 20px;
 }
 </style>
 
