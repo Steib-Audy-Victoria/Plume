@@ -9,6 +9,8 @@
     "
   >
     <CardArtisteRecherche
+      v-for="dessins in listeDessins"
+      :key="dessins.id"
       :image="dessins.image"
       :imgArt="dessins.imgArt"
       :nom="dessins.Nom"
@@ -42,7 +44,6 @@ export default {
   data() {
     return {
       listeDessins: [],
-      nom: null,
     };
   },
   mounted() {
@@ -70,6 +71,19 @@ export default {
               console.log("erreur downloadUrl", error);
             });
         });
+        this.listeDessins.forEach(function (personne2) {
+          const storage2 = getStorage();
+          const spaceRef2 = ref(storage2, "users/" + personne2.imgArt);
+          getDownloadURL(spaceRef2)
+            .then((url) => {
+              personne2.imgArt = url;
+              console.log("personne2", personne2);
+            })
+            .catch((error) => {
+              console.log("erreur downloadUrl", error);
+            });
+        });
+
         console.log("listeDessins", this.listeDessins);
       });
     },

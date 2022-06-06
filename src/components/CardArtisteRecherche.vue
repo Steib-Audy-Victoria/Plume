@@ -2,7 +2,7 @@
   <div class="bg-gradient-to-r to-Orange from-Rouge p-0.5 w-max rounded-lg m-5">
     <div class="bg-white p-0.5 w-max rounded-lg">
       <div class="flex justify-start items-center">
-        <img :src="imgArt" class="object-none" />
+        <img :src="imgArt" class="rounded-full w-20 h-20 object-cover m-2" />
         <p
           class="
             flex-grow
