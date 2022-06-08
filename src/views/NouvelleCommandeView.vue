@@ -86,6 +86,10 @@
               font-semibold font-baloo
               w-64
               h-12
+              hover:bg-gradient-to-r
+              hover:to-Orange
+              hover:from-Rouge
+              hover:text-white
             "
           >
             Commencer
