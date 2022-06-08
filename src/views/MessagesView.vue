@@ -1,5 +1,5 @@
 <template>
-  <main class="pt-24">
+  <main class="pt-24 mx-2 mb-4">
     <div v-if="users == null">
       <h4 class="text-center" role="alert">
         Vous devez être connecté pour utiliser le Chat !!
