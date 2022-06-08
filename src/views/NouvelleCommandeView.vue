@@ -1,70 +1,99 @@
 <template>
-  <form class="pt-16" @submit.prevent="createCommande">
-    <div class="flex flex-col place-items-center">
-      <p class="font-baloo text-xl font-semibold p-3">Importez un dessin</p>
-      <img :src="imageData" />
-      <div
-        class="bg-gradient-to-l to-Rouge from-Orange p-0.5 w-max rounded-xl m-3"
-      >
-        <input
-          class="text-xl bg-white rounded-xl font-semibold font-baloo"
-          type="file"
-          ref="file"
-          id="file"
-          @change="previewImage"
-        />
-      </div>
-      <p class="font-baloo text-xl font-semibold p-3">De qui est le dessin ?</p>
-      <div class="bg-gradient-to-r to-Orange from-Rouge rounded-lg p-0.5">
-        <input
-          class="w-80 rounded-lg placeholder:pl-2"
-          v-model="commande.personne"
-          placeholder="Insérez du texte"
-          required
-        />
-      </div>
-      <p class="font-baloo text-xl font-semibold p-3">Nommez-le</p>
-      <div class="bg-gradient-to-r to-Orange from-Rouge rounded-lg p-0.5">
-        <input
-          class="w-80 rounded-lg placeholder:pl-2"
-          v-model="commande.nom"
-          placeholder="Insérez du texte"
-          required
-        />
-      </div>
-      <p class="font-baloo text-xl font-semibold p-3">Quel style ?</p>
-      <div class="bg-gradient-to-l to-Rouge from-Orange p-0.5 w-max rounded-xl">
-        <select class="rounded-xl" v-model="commande.style">
-          <option selected disabled>Sélectionner un Style</option>
-          <option v-for="style in listeStyle" :key="style.nom">
-            {{ style.nom }}
-          </option>
-        </select>
-      </div>
-      <!--<div
-        class="grid sm:grid-cols-3 grid-cols-2 place-items-center m-3"
-      >
-        <CategorieBouton CatBtn="Manga"></CategorieBouton>
-        <CategorieBouton CatBtn="Comics"></CategorieBouton>
-        <CategorieBouton CatBtn="Réaliste"></CategorieBouton>
-        <CategorieBouton CatBtn="BD"></CategorieBouton>
-        <CategorieBouton CatBtn="3D"></CategorieBouton>
-        <CategorieBouton CatBtn="Caricature"></CategorieBouton>
-        <CategorieBouton CatBtn="Peinture"></CategorieBouton>
-        <CategorieBouton CatBtn="Aquarelle"></CategorieBouton>
-      </div>-->
-      <div
-        class="bg-gradient-to-r to-Orange from-Rouge w-max rounded-xl p-0.5 m-6"
-      >
-        <button
-          type="submit"
-          class="text-xl bg-white rounded-xl font-semibold font-baloo w-64 h-12"
+  <main>
+    <form class="pt-16" @submit.prevent="createCommande">
+      <div class="flex flex-col place-items-center">
+        <p class="font-baloo text-xl font-semibold p-3">Importez un dessin</p>
+        <img :src="imageData" />
+        <div
+          class="
+            bg-gradient-to-l
+            to-Rouge
+            from-Orange
+            p-0.5
+            w-max
+            rounded-xl
+            m-3
+          "
         >
-          Commencer
-        </button>
+          <input
+            class="text-xl bg-white rounded-xl font-semibold font-baloo"
+            type="file"
+            ref="file"
+            id="file"
+            @change="previewImage"
+          />
+        </div>
+        <p class="font-baloo text-xl font-semibold p-3">
+          De qui est le dessin ?
+        </p>
+        <div class="bg-gradient-to-r to-Orange from-Rouge rounded-lg p-0.5">
+          <input
+            class="w-80 rounded-lg placeholder:pl-2"
+            v-model="commande.personne"
+            placeholder="Insérez du texte"
+            required
+          />
+        </div>
+        <p class="font-baloo text-xl font-semibold p-3">Nommez-le</p>
+        <div class="bg-gradient-to-r to-Orange from-Rouge rounded-lg p-0.5">
+          <input
+            class="w-80 rounded-lg placeholder:pl-2"
+            v-model="commande.nom"
+            placeholder="Insérez du texte"
+            required
+          />
+        </div>
+        <p class="font-baloo text-xl font-semibold p-3">Quel style ?</p>
+        <div
+          class="bg-gradient-to-l to-Rouge from-Orange p-0.5 w-max rounded-xl"
+        >
+          <select class="rounded-xl" v-model="commande.style">
+            <option selected disabled>Sélectionner un Style</option>
+            <option v-for="style in listeStyle" :key="style.nom">
+              {{ style.nom }}
+            </option>
+          </select>
+        </div>
+        <!--<div
+          class="grid sm:grid-cols-3 grid-cols-2 place-items-center m-3"
+        >
+          <CategorieBouton CatBtn="Manga"></CategorieBouton>
+          <CategorieBouton CatBtn="Comics"></CategorieBouton>
+          <CategorieBouton CatBtn="Réaliste"></CategorieBouton>
+          <CategorieBouton CatBtn="BD"></CategorieBouton>
+          <CategorieBouton CatBtn="3D"></CategorieBouton>
+          <CategorieBouton CatBtn="Caricature"></CategorieBouton>
+          <CategorieBouton CatBtn="Peinture"></CategorieBouton>
+          <CategorieBouton CatBtn="Aquarelle"></CategorieBouton>
+        </div>-->
+        <div
+          class="
+            bg-gradient-to-r
+            to-Orange
+            from-Rouge
+            w-max
+            rounded-xl
+            p-0.5
+            m-6
+          "
+        >
+          <button
+            type="submit"
+            class="
+              text-xl
+              bg-white
+              rounded-xl
+              font-semibold font-baloo
+              w-64
+              h-12
+            "
+          >
+            Commencer
+          </button>
+        </div>
       </div>
-    </div>
-  </form>
+    </form>
+  </main>
 </template>
 
 <script>

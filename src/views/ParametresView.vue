@@ -1,22 +1,24 @@
 <template>
-  <div class="py-16">
-    <div class="font-baloo pl-12">
-      <button type="button" class="text-xl py-10" @click="onDcnx()">
-        SE DECONNECTER
-      </button>
-      <div class="text-base">
-        <RouterLink to="/Notification"
-          ><p class="py-4">NOTIFICATIONS</p></RouterLink
-        >
-        <RouterLink to="/Securite"><p class="py-4">SECURITE</p></RouterLink>
-        <RouterLink to="/Aide"><p class="py-4">AIDE</p></RouterLink>
-        <RouterLink to="/apropos"><p class="py-4">A PROPOS</p></RouterLink>
-      </div>
-      <div class="flex justify-center items-center">
-        <BtnArtisteClient></BtnArtisteClient>
+  <main>
+    <div class="py-16">
+      <div class="font-baloo pl-12">
+        <button type="button" class="text-xl py-10" @click="onDcnx()">
+          SE DECONNECTER
+        </button>
+        <div class="text-base">
+          <RouterLink to="/Notification"
+            ><p class="py-4">NOTIFICATIONS</p></RouterLink
+          >
+          <RouterLink to="/Securite"><p class="py-4">SECURITE</p></RouterLink>
+          <RouterLink to="/Aide"><p class="py-4">AIDE</p></RouterLink>
+          <RouterLink to="/apropos"><p class="py-4">A PROPOS</p></RouterLink>
+        </div>
+        <div class="flex justify-center items-center">
+          <BtnArtisteClient></BtnArtisteClient>
+        </div>
       </div>
     </div>
-  </div>
+  </main>
 </template>
 
 <script>

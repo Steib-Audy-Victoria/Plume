@@ -1,129 +1,137 @@
 <template>
-  <div class="flex justify-center">
-    <h1
-      class="
-        font-praise
-        text-titre text-transparent
-        p-2
-        pt-24
-        lg:pt-10
-        xl:pt-3
-        bg-gradient-to-l bg-clip-text
-        to-Rouge
-        from-Orange
-      "
-    >
-      Plume
-    </h1>
-  </div>
-  <div v-if="users == null" class="flex justify-center items-center m-4">
-    <button
-      class="
-        bg-Pourpre
-        rounded-lg
-        text-center
-        font-semibold
-        text-2xl text-white
-        px-8
-        py-3
-      "
-    >
-      <RouterLink to="/Connexion">Se connecter</RouterLink>
-    </button>
-  </div>
-  <div v-else>
-    <div class="pb-8">
-      <div>
-        <p class="font-baloo text-4xl w-1/5">NOUVELLE COMMANDE</p>
-        <hr class="my-2 border-1 border-gradient-r-ligne w-1/3" />
-      </div>
-      <div class="flex justify-center">
-        <RouterLink to="/NouvelleCommande"><BtnAjout></BtnAjout></RouterLink>
-      </div>
-    </div>
-    <div class="pb-8">
-      <p class="font-baloo text-4xl w-1/5">COMMANDE EN COURS</p>
-      <hr class="my-2 border-1 border-gradient-r-ligne w-1/3" />
-      <div
+  <main>
+    <div class="flex justify-center">
+      <h1
         class="
-          flex flex-col
-          md:grid md:grid-cols-2
-          xl:grid-cols-3
-          place-items-center
+          font-praise
+          text-titre text-transparent
+          p-2
+          pt-24
+          lg:pt-10
+          xl:pt-3
+          bg-gradient-to-l bg-clip-text
+          to-Rouge
+          from-Orange
         "
       >
-        <!--<CardCommande
-          v-for="commande in listeCommande"
-          :key="commande.id"
-          :image="commande.dessin"
-          :personne="commande.personne"
-          :nom="commande.nom"
-        ></CardCommande>-->
+        Plume
+      </h1>
+    </div>
+    <div v-if="users == null" class="flex justify-center items-center m-4">
+      <button
+        class="
+          bg-Pourpre
+          rounded-lg
+          text-center
+          font-semibold
+          text-2xl text-white
+          px-8
+          py-3
+        "
+      >
+        <RouterLink to="/Connexion">Se connecter</RouterLink>
+      </button>
+    </div>
+    <div v-else>
+      <div class="pb-8">
+        <div>
+          <p class="font-baloo text-4xl w-1/5">NOUVELLE COMMANDE</p>
+          <hr class="my-2 border-1 border-gradient-r-ligne w-1/3" />
+        </div>
+        <div class="flex justify-center">
+          <RouterLink to="/NouvelleCommande"><BtnAjout></BtnAjout></RouterLink>
+        </div>
+      </div>
+      <div class="pb-8">
+        <p class="font-baloo text-4xl w-1/5">COMMANDE EN COURS</p>
+        <hr class="my-2 border-1 border-gradient-r-ligne w-1/3" />
         <div
           class="
-            bg-gradient-to-tr
-            to-Orange
-            from-Rouge
-            p-0.5
-            w-max
-            rounded-xl
-            m-3
+            flex flex-col
+            md:grid md:grid-cols-2
+            xl:grid-cols-3
+            place-items-center
           "
-          v-for="commande in listeCommande"
-          :key="commande.id"
         >
-          <div class="flex justify-evenly bg-white p-1 w-max rounded-xl">
-            <div class="grid content-around">
-              <div>
-                <p class="text-xl font-bold text-left text-black">
-                  {{ commande.personne }}
-                </p>
-                <br />
-                <p class="text-xl font-bold text-left text-black">
-                  {{ commande.nom }}
-                </p>
+          <!--<CardCommande
+            v-for="commande in listeCommande"
+            :key="commande.id"
+            :image="commande.dessin"
+            :personne="commande.personne"
+            :nom="commande.nom"
+          ></CardCommande>-->
+          <div
+            class="
+              bg-gradient-to-tr
+              to-Orange
+              from-Rouge
+              p-0.5
+              w-max
+              rounded-xl
+              m-3
+            "
+            v-for="commande in listeCommande"
+            :key="commande.id"
+          >
+            <div class="flex justify-evenly bg-white p-1 w-max rounded-xl">
+              <div class="grid content-around">
+                <div>
+                  <p class="text-xl font-bold text-left text-black">
+                    {{ commande.personne }}
+                  </p>
+                  <br />
+                  <p class="text-xl font-bold text-left text-black">
+                    {{ commande.nom }}
+                  </p>
+                </div>
+                <div>
+                  <p class="text-xl font-bold text-left text-Orange">Alex H.</p>
+                  <p class="text-xl font-bold text-left text-Orange">50 €</p>
+                </div>
+                <div class="flex items-center justify-center gap-8">
+                  <RouterLink
+                    :to="{
+                      name: 'updateCommande',
+                      params: { id: commande.id },
+                    }"
+                    ><modif></modif
+                  ></RouterLink>
+                  <RouterLink
+                    :to="{
+                      name: 'deleteCommande',
+                      params: { id: commande.id },
+                    }"
+                  >
+                    <suppr></suppr>
+                  </RouterLink>
+                </div>
               </div>
               <div>
-                <p class="text-xl font-bold text-left text-Orange">Alex H.</p>
-                <p class="text-xl font-bold text-left text-Orange">50 €</p>
+                <img
+                  :src="commande.dessin"
+                  class="rounded-r-lg object-cover pl-2 w-52 h-52"
+                />
               </div>
-              <div class="flex items-center justify-center gap-8">
-                <RouterLink
-                  :to="{ name: 'updateCommande', params: { id: commande.id } }"
-                  ><modif></modif
-                ></RouterLink>
-                <RouterLink
-                  :to="{ name: 'deleteCommande', params: { id: commande.id } }"
-                >
-                  <suppr></suppr>
-                </RouterLink>
-              </div>
-            </div>
-            <div>
-              <img
-                :src="commande.dessin"
-                class="rounded-r-lg object-cover pl-2 w-52 h-52"
-              />
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="pb-8">
-      <p class="font-baloo text-4xl w-1/5">COMMANDES PASSÉES</p>
-      <hr class="my-2 border-1 border-gradient-r-ligne w-1/3" />
-      <div
-        class="
-          flex flex-col
-          md:grid md:grid-cols-2
-          xl:grid-cols-3
-          place-items-center
-        "
-      >
-        <CardCommande2></CardCommande2>
+      <div class="pb-8">
+        <p class="font-baloo text-4xl w-1/5">COMMANDES PASSÉES</p>
+        <hr class="my-2 border-1 border-gradient-r-ligne w-1/3" />
+        <div
+          class="
+            flex flex-col
+            md:grid md:grid-cols-2
+            xl:grid-cols-3
+            place-items-center
+          "
+        >
+          <CardCommande2></CardCommande2>
+        </div>
       </div>
     </div>
-  </div>
+  </main>
 </template>
 
 <script >

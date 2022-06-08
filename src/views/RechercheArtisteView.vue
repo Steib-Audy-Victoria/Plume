@@ -1,32 +1,34 @@
 <template>
-  <div class="pt-16"></div>
-  <div
-    class="
-      flex flex-col
-      md:grid md:grid-cols-2
-      xl:grid-cols-3
-      place-items-center
-    "
-  >
-    <CardArtisteRecherche
-      v-for="dessins in listeDessins"
-      :key="dessins.id"
-      :image="dessins.image"
-      :imgArt="dessins.imgArt"
-      :nom="dessins.Nom"
-      :prix="dessins.prix"
-    ></CardArtisteRecherche>
-    <!--<CardArtisteRecherche></CardArtisteRecherche>
-    <CardArtisteRecherche></CardArtisteRecherche>
-    <CardArtisteRecherche></CardArtisteRecherche>-->
-  </div>
-  <div class="fixed right-0">
-    <RouterLink to="/profilpaiement"
-      ><button class="bg-Orange text-lg text-white rounded-lg font-baloo p-2">
-        Sélectionner
-      </button></RouterLink
+  <main>
+    <div class="pt-16"></div>
+    <div
+      class="
+        flex flex-col
+        md:grid md:grid-cols-2
+        xl:grid-cols-3
+        place-items-center
+      "
     >
-  </div>
+      <CardArtisteRecherche
+        v-for="dessins in listeDessins"
+        :key="dessins.id"
+        :image="dessins.image"
+        :imgArt="dessins.imgArt"
+        :nom="dessins.Nom"
+        :prix="dessins.prix"
+      ></CardArtisteRecherche>
+      <!--<CardArtisteRecherche></CardArtisteRecherche>
+      <CardArtisteRecherche></CardArtisteRecherche>
+      <CardArtisteRecherche></CardArtisteRecherche>-->
+    </div>
+    <div class="fixed right-0">
+      <RouterLink to="/profilpaiement"
+        ><button class="bg-Orange text-lg text-white rounded-lg font-baloo p-2">
+          Sélectionner
+        </button></RouterLink
+      >
+    </div>
+  </main>
 </template>
 
 <script>

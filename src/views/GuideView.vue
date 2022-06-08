@@ -1,16 +1,18 @@
 <template>
-  <CardArtisteRecherche></CardArtisteRecherche>
-  <PostFeed></PostFeed>
-  <CardCommande></CardCommande>
-  <CategorieBouton CatBtn="Manga"></CategorieBouton>
-  <CardCommande2></CardCommande2>
-  <CardAPropos></CardAPropos>
-  <Notification></Notification>
-  <BoutonAPropos MsgBtn="Faire un don"></BoutonAPropos>
-  <BtnConIns MsgBtn="Se connecter"></BtnConIns>
-  <BoutonConnexion></BoutonConnexion>
-  <BtnArtisteClient></BtnArtisteClient>
-  <Message></Message>
+  <main>
+    <CardArtisteRecherche></CardArtisteRecherche>
+    <PostFeed></PostFeed>
+    <CardCommande></CardCommande>
+    <CategorieBouton CatBtn="Manga"></CategorieBouton>
+    <CardCommande2></CardCommande2>
+    <CardAPropos></CardAPropos>
+    <Notification></Notification>
+    <BoutonAPropos MsgBtn="Faire un don"></BoutonAPropos>
+    <BtnConIns MsgBtn="Se connecter"></BtnConIns>
+    <BoutonConnexion></BoutonConnexion>
+    <BtnArtisteClient></BtnArtisteClient>
+    <Message></Message>
+  </main>
 </template>
 
 <script >
