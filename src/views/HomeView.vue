@@ -92,7 +92,11 @@
                   :to="{ name: 'updateCommande', params: { id: commande.id } }"
                   ><modif></modif
                 ></RouterLink>
-                <suppr></suppr>
+                <RouterLink
+                  :to="{ name: 'deleteCommande', params: { id: commande.id } }"
+                >
+                  <suppr></suppr>
+                </RouterLink>
               </div>
             </div>
             <div>
@@ -134,6 +138,7 @@ import {
   getFirestore, // Obtenir le Firestore
   collection, // Utiliser une collection de documents
   onSnapshot, // Demander une liste de documents d'une collection, en les synchronisant
+  deleteDoc,
   query, // Permet d'effectuer des requêtes sur Firestore
   orderBy, // Permet de demander le tri d'une requête query
 } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js";

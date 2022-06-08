@@ -18,6 +18,7 @@ import Notification from '../components/Notification.vue'
 import Securite from '../components/Securite.vue'
 import Aide from '../components/Aide.vue'
 import UpdateCommandeView from '../views/UpdateCommandeView.vue'
+import DeleteCommandeView from '../views/DeleteCommandeView.vue'
 import Page404 from '../views/Page404.vue'
 
 
@@ -106,6 +107,11 @@ const router = createRouter({
       path: '/updateCommande/:id',
       name: 'updateCommande',
       component: UpdateCommandeView
+    },
+    {
+      path: '/deleteCommande/:id',
+      name: 'deleteCommande',
+      component: DeleteCommandeView
     },
 
     {
