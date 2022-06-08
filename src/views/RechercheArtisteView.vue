@@ -20,6 +20,13 @@
     <CardArtisteRecherche></CardArtisteRecherche>
     <CardArtisteRecherche></CardArtisteRecherche>-->
   </div>
+  <div class="fixed right-0">
+    <RouterLink to="/profilpaiement"
+      ><button class="bg-Orange text-lg text-white rounded-lg font-baloo p-2">
+        Sélectionner
+      </button></RouterLink
+    >
+  </div>
 </template>
 
 <script>
