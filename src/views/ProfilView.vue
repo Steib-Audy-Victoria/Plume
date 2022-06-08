@@ -24,6 +24,7 @@
           class="cursor-pointer"
         ></imageD>
       </div>
+
       <div class="flex justify-center">
         <heartB
           v-on:click="
