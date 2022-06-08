@@ -16,7 +16,7 @@
           "
         >
           <input
-            class="text-xl bg-white rounded-xl font-semibold font-baloo"
+            class="text-xl bg-white rounded-xl font-semibold font-baloo p-1"
             type="file"
             ref="file"
             id="file"
@@ -47,7 +47,7 @@
         <div
           class="bg-gradient-to-l to-Rouge from-Orange p-0.5 w-max rounded-xl"
         >
-          <select class="rounded-xl" v-model="commande.style">
+          <select class="rounded-xl mx-1" v-model="commande.style">
             <option selected disabled>Sélectionner un Style</option>
             <option v-for="style in listeStyle" :key="style.nom">
               {{ style.nom }}
