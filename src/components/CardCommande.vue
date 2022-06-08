@@ -5,10 +5,9 @@
     <div class="flex justify-evenly bg-white p-1 w-max rounded-xl">
       <div class="grid content-around">
         <div>
-          <p class="text-xl font-bold text-left text-black">Dessin</p>
-          <p class="text-xl font-bold text-left text-black">Titouan</p>
+          <p class="text-xl font-bold text-left text-black">{{ personne }}</p>
           <br />
-          <p class="text-xl font-bold text-left text-black">Bonhomme</p>
+          <p class="text-xl font-bold text-left text-black">{{ nom }}</p>
         </div>
         <div>
           <p class="text-xl font-bold text-left text-Orange">Alex H.</p>
@@ -16,11 +15,18 @@
         </div>
       </div>
       <div>
-        <img
-          src="/img/dessin_enfant.jpg"
-          class="rounded-r-lg object-cover pl-2"
-        />
+        <img :src="image" class="rounded-r-lg object-cover pl-2 w-52 h-52" />
       </div>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    personne: String,
+    nom: String,
+    image: String,
+  },
+};
+</script>

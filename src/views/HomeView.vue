@@ -52,7 +52,13 @@
           place-items-center
         "
       >
-        <CardCommande></CardCommande>
+        <CardCommande
+          v-for="commande in listeCommande"
+          :key="commande.id"
+          :image="commande.dessin"
+          :personne="commande.personne"
+          :nom="commande.nom"
+        ></CardCommande>
       </div>
     </div>
     <div class="pb-8">
@@ -77,6 +83,22 @@ import CardCommande from "../components/CardCommande.vue";
 import CardCommande2 from "../components/CardCommande2.vue";
 import BtnAjout from "../components/BtnAjout.vue";
 
+// Bibliothèque Firestore : import des fonctions
+import {
+  getFirestore, // Obtenir le Firestore
+  collection, // Utiliser une collection de documents
+  onSnapshot, // Demander une liste de documents d'une collection, en les synchronisant
+  query, // Permet d'effectuer des requêtes sur Firestore
+  orderBy, // Permet de demander le tri d'une requête query
+} from "https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js";
+
+// Cloud Storage : import des fonctions
+import {
+  getStorage, // Obtenir le Cloud Storage
+  ref, // Pour créer une référence à un fichier à uploader
+  getDownloadURL, // Permet de récupérer l'adress complète d'un fichier du Storage
+} from "https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js";
+
 // Fonction authentification
 import { getAuth } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-auth.js";
 
@@ -86,10 +108,12 @@ export default {
   data() {
     return {
       users: null,
+      listeCommande: [],
     };
   },
   mounted() {
     this.getUsers();
+    this.getCommande();
   },
   methods: {
     async getUsers() {
@@ -100,6 +124,27 @@ export default {
           }
         }.bind(this)
       );
+    },
+    async getCommande() {
+      const firestore = getFirestore();
+      const dbCom = collection(firestore, "commande");
+      const query = await onSnapshot(dbCom, (snapshot) => {
+        this.listeCommande = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        this.listeCommande.forEach(function (personne) {
+          const storage = getStorage();
+          const spaceRef = ref(storage, "commande/" + personne.dessin);
+          getDownloadURL(spaceRef)
+            .then((url) => {
+              personne.dessin = url;
+            })
+            .catch((error) => {
+              console.log("erreur downloadUrl", error);
+            });
+        });
+      });
     },
   },
 };
