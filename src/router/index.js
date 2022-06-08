@@ -17,6 +17,7 @@ import InscriptionView from '../views/InscriptionView.vue'
 import Notification from '../components/Notification.vue'
 import Securite from '../components/Securite.vue'
 import Aide from '../components/Aide.vue'
+import UpdateCommandeView from '../views/UpdateCommandeView.vue'
 import Page404 from '../views/Page404.vue'
 
 
@@ -101,6 +102,12 @@ const router = createRouter({
     { path: '/Notification', name: 'Notification', component: Notification },
     { path: '/Securite', name: 'Securite', component: Securite },
     { path: '/Aide', name: 'Aide', component: Aide },
+    {
+      path: '/updateCommande/:id',
+      name: 'updateCommande',
+      component: UpdateCommandeView
+    },
+
     {
       path: '/:pathMatch(.*)*',
       name: 'page404',

@@ -52,13 +52,57 @@
           place-items-center
         "
       >
-        <CardCommande
+        <!--<CardCommande
           v-for="commande in listeCommande"
           :key="commande.id"
           :image="commande.dessin"
           :personne="commande.personne"
           :nom="commande.nom"
-        ></CardCommande>
+        ></CardCommande>-->
+        <div
+          class="
+            bg-gradient-to-tr
+            to-Orange
+            from-Rouge
+            p-0.5
+            w-max
+            rounded-xl
+            m-3
+          "
+          v-for="commande in listeCommande"
+          :key="commande.id"
+        >
+          <div class="flex justify-evenly bg-white p-1 w-max rounded-xl">
+            <div class="grid content-around">
+              <div>
+                <p class="text-xl font-bold text-left text-black">
+                  {{ commande.personne }}
+                </p>
+                <br />
+                <p class="text-xl font-bold text-left text-black">
+                  {{ commande.nom }}
+                </p>
+              </div>
+              <div>
+                <p class="text-xl font-bold text-left text-Orange">Alex H.</p>
+                <p class="text-xl font-bold text-left text-Orange">50 €</p>
+              </div>
+              <div class="flex items-center justify-center gap-8">
+                <RouterLink
+                  :to="{ name: 'updateCommande', params: { id: commande.id } }"
+                  ><modif></modif
+                ></RouterLink>
+                <suppr></suppr>
+              </div>
+            </div>
+            <div>
+              <img
+                :src="commande.dessin"
+                class="rounded-r-lg object-cover pl-2 w-52 h-52"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="pb-8">
@@ -82,6 +126,8 @@
 import CardCommande from "../components/CardCommande.vue";
 import CardCommande2 from "../components/CardCommande2.vue";
 import BtnAjout from "../components/BtnAjout.vue";
+import modif from "../components/icons/modif.vue";
+import suppr from "../components/icons/suppr.vue";
 
 // Bibliothèque Firestore : import des fonctions
 import {
@@ -104,7 +150,7 @@ import { getAuth } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-auth.
 
 export default {
   name: "App",
-  components: { CardCommande, CardCommande2, BtnAjout },
+  components: { CardCommande, CardCommande2, BtnAjout, modif, suppr },
   data() {
     return {
       users: null,
