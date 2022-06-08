@@ -77,12 +77,59 @@
         </div>
       </div>
       <div class="flex justify-evenly my-10">
-        <button class="border p-2 rounded-lg text-lg" type="submit">
-          Modifier
-        </button>
-        <button class="border p-2 rounded-lg text-lg">
-          <router-link to="/">Cancel</router-link>
-        </button>
+        <div
+          class="
+            bg-gradient-to-r
+            to-Orange
+            from-Rouge
+            w-max
+            rounded-xl
+            p-0.5
+            m-6
+          "
+        >
+          <button
+            class="
+              p-2
+              bg-white
+              rounded-xl
+              text-lg
+              hover:bg-gradient-to-r
+              hover:to-Orange
+              hover:from-Rouge
+              hover:text-white
+            "
+            type="submit"
+          >
+            Modifier
+          </button>
+        </div>
+        <div
+          class="
+            bg-gradient-to-r
+            to-Orange
+            from-Rouge
+            w-max
+            rounded-xl
+            p-0.5
+            m-6
+          "
+        >
+          <button
+            class="
+              p-2
+              bg-white
+              rounded-xl
+              text-lg
+              hover:bg-gradient-to-r
+              hover:to-Orange
+              hover:from-Rouge
+              hover:text-white
+            "
+          >
+            <router-link to="/">Cancel</router-link>
+          </button>
+        </div>
       </div>
     </form>
   </main>
