@@ -4,7 +4,7 @@
       <h2 class="text-Custom-red text-4xl">Suppression d'une commande</h2>
     </div>
     <form @submit.prevent="deleteCommande">
-      <div class="grid grid-cols-2">
+      <div class="grid md:grid-cols-2 place-items-center">
         <div class="mx-16">
           <img :src="photoActuelle" />
         </div>

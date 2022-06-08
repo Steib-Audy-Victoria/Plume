@@ -4,7 +4,7 @@
       <h2 class="text-Custom-red text-4xl">Mise à jour d'une commande</h2>
     </div>
     <form @submit.prevent="updateCommande">
-      <div class="grid grid-cols-2">
+      <div class="grid md:grid-cols-2 place-items-center">
         <div class="mx-16">
           <img :src="imageData" />
         </div>
