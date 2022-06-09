@@ -37,9 +37,13 @@
         <h2 class="font-baloo text-2xl my-4 font-semibold">
           Présentation de quelques dessin d'enfant sublimer par un artiste
         </h2>
-        <img src="/img/dessin_dragon.jpg" alt="Dessin de dragon" />
-        <img src="/img/dessin_enfant.jpg" alt="Dessin de montre d'un enfant" />
-        <img src="/img/monster_dessin.jpg" alt="Dessin de monstre" />
+        <img class="my-2" src="/img/dragon.jpg" alt="Dessin de dragon" />
+        <img
+          class="my-2"
+          src="/img/Gourmand.jpg"
+          alt="Dessin de montre gourmand"
+        />
+        <img class="my-2" src="/img/monster.jpg" alt="Dessin de monstre" />
       </div>
     </div>
     <div v-else>
