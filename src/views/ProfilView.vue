@@ -60,9 +60,15 @@
             place-items-center
           "
         >
-          <img src="/img/dessin_enfant.jpg" alt="" />
-          <img src="/img/monster_dessin.jpg" alt="" />
-          <img src="/img/dessin_dragon.jpg" alt="" />
+          <img src="/img/favori1.jpg" alt="dessin d'un artiste d'un monstre" />
+          <img
+            src="/img/favori2.jpg"
+            alt="dessin d'un artiste d'un monstre féerique"
+          />
+          <img
+            src="/img/Red_Artiste.jpg"
+            alt="dessin d'un artiste d'un monstre rouge"
+          />
         </div>
       </div>
     </div>
