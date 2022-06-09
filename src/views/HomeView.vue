@@ -17,20 +17,30 @@
         Plume
       </h1>
     </div>
-    <div v-if="users == null" class="flex justify-center items-center m-4">
-      <button
-        class="
-          bg-Pourpre
-          rounded-lg
-          text-center
-          font-semibold
-          text-2xl text-white
-          px-8
-          py-3
-        "
-      >
-        <RouterLink to="/Connexion">Se connecter</RouterLink>
-      </button>
+    <div v-if="users == null" class="m-4">
+      <div class="flex justify-center items-center my-10">
+        <button
+          class="
+            bg-Pourpre
+            rounded-lg
+            text-center
+            font-semibold
+            text-2xl text-white
+            px-8
+            py-3
+          "
+        >
+          <RouterLink to="/Connexion">Se connecter</RouterLink>
+        </button>
+      </div>
+      <div class="grid grid-cols-1 place-items-center">
+        <h2 class="font-baloo text-2xl my-4 font-semibold">
+          Présentation de quelques dessin d'enfant sublimer par un artiste
+        </h2>
+        <img src="/img/dessin_dragon.jpg" alt="Dessin de dragon" />
+        <img src="/img/dessin_enfant.jpg" alt="Dessin de montre d'un enfant" />
+        <img src="/img/monster_dessin.jpg" alt="Dessin de monstre" />
+      </div>
     </div>
     <div v-else>
       <div class="pb-8">
