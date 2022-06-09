@@ -68,7 +68,7 @@
           <div class="flex justify-center">
             <BtnConIns type="submit" MsgBtn="Se connecter"></BtnConIns>
           </div>
-          <div role="alert">{{ message }}</div>
+          <!--<div role="alert">{{ message }}</div>-->
           <div class="flex justify-center items-center m-2">
             <hr class="my-1 pb-2 border-3 border-white w-1/4" />
             <p class="text-white font-baloo text-xl px-2">OU</p>
