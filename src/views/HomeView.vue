@@ -35,7 +35,7 @@
       </div>
       <div class="grid grid-cols-1 place-items-center">
         <h2 class="font-baloo text-2xl my-4 font-semibold">
-          Présentation de quelques dessin d'enfant sublimer par un artiste
+          Présentation de quelques dessins d'enfants sublimés par un artiste
         </h2>
         <img class="my-2" src="/img/dragon.jpg" alt="Dessin de dragon" />
         <img
